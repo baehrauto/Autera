@@ -1,11 +1,11 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 
-export default function Success() {
+function SuccessContent() {
   const searchParams = useSearchParams();
   const [status, setStatus] = useState<'loading' | 'success' | 'error'>('loading');
   const sessionId = searchParams.get('session_id');
@@ -104,5 +104,25 @@ export default function Success() {
         </div>
       </div>
     </main>
+  );
+}
+
+export default function Success() {
+  return (
+    <Suspense fallback={
+      <main className="min-h-screen bg-gray-50">
+        <Navbar />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center bg-white rounded-3xl shadow-lg p-12 max-w-xl mx-auto">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+            <h1 className="mt-6 text-3xl font-extrabold text-gray-900 mb-4">
+              Loading...
+            </h1>
+          </div>
+        </div>
+      </main>
+    }>
+      <SuccessContent />
+    </Suspense>
   );
 } 
