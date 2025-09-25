@@ -294,7 +294,8 @@ export default function Solutions() {
           </div>
         </section>
 
-        {/* Results Section */}
+        {/* Results Section - HIDDEN FOR NOW */}
+        {/* 
         <section className="py-32 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.05)_0%,transparent_70%)]"></div>
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
@@ -324,6 +325,7 @@ export default function Solutions() {
             </div>
           </div>
         </section>
+        */}
 
         {/* Testimonials */}
         <section className="py-32 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">
