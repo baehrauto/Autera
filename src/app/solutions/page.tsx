@@ -158,7 +158,7 @@ export default function Solutions() {
       <Navbar />
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-b from-black via-gray-900 to-black pt-32 pb-32 overflow-hidden">
+        <section className="relative bg-gradient-to-b from-black via-gray-900 to-black pt-20 sm:pt-24 md:pt-32 pb-16 sm:pb-24 md:pb-32 overflow-hidden">
           {/* Animated Background Elements */}
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5"></div>
           <div className="absolute top-20 left-10 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl animate-pulse"></div>
@@ -176,21 +176,21 @@ export default function Solutions() {
                 Complete Business Transformation
               </span>
             </div>
-            <h1 className="text-8xl md:text-9xl font-black text-white mb-8 tracking-tight leading-none">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black text-white mb-6 sm:mb-8 tracking-tight leading-none">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
                 AUTOMATION
               </span>
               <br />
               <span className="text-white">SOLUTIONS</span>
             </h1>
-            <p className="text-3xl md:text-4xl text-gray-300 max-w-5xl mx-auto mb-12 font-light tracking-wide leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-300 max-w-5xl mx-auto mb-8 sm:mb-12 font-light tracking-wide leading-relaxed px-4">
               Transform your business operations with intelligent automation that works 24/7 to drive growth, reduce costs, and eliminate human error.
             </p>
-            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
-              <Link href="/contact" className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-2xl font-black text-xl shadow-2xl hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-cyan-500/25 border border-cyan-400/50 tracking-wider">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center px-4">
+              <Link href="/contact" className="inline-flex items-center px-6 sm:px-12 py-4 sm:py-6 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-2xl font-black text-lg sm:text-xl shadow-2xl hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-cyan-500/25 border border-cyan-400/50 tracking-wider w-full sm:w-auto text-center justify-center">
                 Get Your Free Audit
               </Link>
-              <Link href="/products" className="inline-flex items-center px-12 py-6 border-2 border-cyan-400/50 text-cyan-300 rounded-2xl font-bold text-xl hover:bg-cyan-400/10 transition-all duration-300 tracking-wider">
+              <Link href="/products" className="inline-flex items-center px-6 sm:px-12 py-4 sm:py-6 border-2 border-cyan-400/50 text-cyan-300 rounded-2xl font-bold text-lg sm:text-xl hover:bg-cyan-400/10 transition-all duration-300 tracking-wider w-full sm:w-auto text-center justify-center">
                 View Our Products
               </Link>
             </div>
@@ -204,40 +204,40 @@ export default function Solutions() {
           <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-20">
-              <h2 className="text-6xl md:text-7xl font-black text-white mb-8 tracking-tight">
+            <div className="text-center mb-12 sm:mb-20">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 sm:mb-8 tracking-tight px-4">
                 Our <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Process</span>
               </h2>
-              <p className="text-2xl text-gray-300 max-w-4xl mx-auto tracking-wide">
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto tracking-wide px-4">
                 A proven methodology that transforms businesses from manual chaos to automated excellence
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
               {processSteps.map((step, index) => (
                 <div key={index} className="group relative">
-                  <div className="flex items-start space-x-8">
-                    <div className="flex-shrink-0">
-                      <div className={`w-24 h-24 bg-gradient-to-r ${step.color} rounded-2xl flex items-center justify-center text-4xl shadow-2xl shadow-cyan-400/25 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6 lg:space-x-8">
+                    <div className="flex-shrink-0 mx-auto sm:mx-0">
+                      <div className={`w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-r ${step.color} rounded-2xl flex items-center justify-center text-2xl sm:text-3xl lg:text-4xl shadow-2xl shadow-cyan-400/25 group-hover:scale-110 transition-transform duration-300`}>
                         {step.icon}
                       </div>
                     </div>
-                    <div className="flex-1">
-                      <div className="flex items-center mb-4">
-                        <span className="text-6xl font-black text-cyan-400/30 mr-4">{step.number}</span>
+                    <div className="flex-1 text-center sm:text-left">
+                      <div className="flex flex-col sm:flex-row items-center sm:items-start mb-4">
+                        <span className="text-4xl sm:text-5xl lg:text-6xl font-black text-cyan-400/30 mb-2 sm:mb-0 sm:mr-4">{step.number}</span>
                         <div>
-                          <h3 className="text-3xl font-black text-white mb-2 tracking-tight">{step.title}</h3>
-                          <p className="text-lg text-cyan-300 font-bold tracking-wider">{step.subtitle}</p>
+                          <h3 className="text-xl sm:text-2xl lg:text-3xl font-black text-white mb-2 tracking-tight">{step.title}</h3>
+                          <p className="text-sm sm:text-base lg:text-lg text-cyan-300 font-bold tracking-wider">{step.subtitle}</p>
                         </div>
                       </div>
-                      <p className="text-xl text-gray-300 mb-6 leading-relaxed">{step.description}</p>
-                      <ul className="space-y-3">
+                      <p className="text-base sm:text-lg lg:text-xl text-gray-300 mb-4 sm:mb-6 leading-relaxed">{step.description}</p>
+                      <ul className="space-y-2 sm:space-y-3">
                         {step.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center">
-                            <div className={`w-6 h-6 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center mr-4 flex-shrink-0 shadow-lg`}>
+                          <li key={featureIndex} className="flex items-start sm:items-center">
+                            <div className={`w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 shadow-lg mt-0.5 sm:mt-0`}>
                               <span className="text-black text-xs font-bold">✓</span>
                             </div>
-                            <span className="text-gray-300 text-lg font-medium tracking-wide">{feature}</span>
+                            <span className="text-gray-300 text-sm sm:text-base lg:text-lg font-medium tracking-wide">{feature}</span>
                           </li>
                         ))}
                       </ul>
@@ -256,34 +256,34 @@ export default function Solutions() {
           <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-20">
-              <h2 className="text-6xl md:text-7xl font-black text-white mb-8 tracking-tight">
+            <div className="text-center mb-12 sm:mb-20">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 sm:mb-8 tracking-tight px-4">
                 Core <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Capabilities</span>
               </h2>
-              <p className="text-2xl text-gray-300 max-w-4xl mx-auto tracking-wide">
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto tracking-wide px-4">
                 Comprehensive automation solutions that cover every aspect of your business operations
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               {capabilities.map((capability, index) => (
-                <div key={index} className="group relative bg-gradient-to-br from-gray-900/90 to-black/90 rounded-3xl p-10 shadow-2xl hover:shadow-cyan-500/25 transition-all duration-500 border border-cyan-400/30 hover:border-cyan-400/60 backdrop-blur-sm">
+                <div key={index} className="group relative bg-gradient-to-br from-gray-900/90 to-black/90 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl hover:shadow-cyan-500/25 transition-all duration-500 border border-cyan-400/30 hover:border-cyan-400/60 backdrop-blur-sm">
                   <div className={`absolute inset-0 bg-gradient-to-br ${capability.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl`}></div>
                   <div className="relative z-10">
-                    <div className="flex items-center mb-6">
-                      <div className="text-5xl mr-6">{capability.icon}</div>
-                      <div>
-                        <h3 className="text-3xl font-black text-white mb-2 tracking-tight">{capability.title}</h3>
-                        <p className="text-lg text-gray-300 font-medium tracking-wide">{capability.description}</p>
+                    <div className="flex flex-col sm:flex-row items-center sm:items-start mb-6">
+                      <div className="text-4xl sm:text-5xl mr-0 sm:mr-6 mb-4 sm:mb-0">{capability.icon}</div>
+                      <div className="text-center sm:text-left">
+                        <h3 className="text-xl sm:text-2xl lg:text-3xl font-black text-white mb-2 tracking-tight">{capability.title}</h3>
+                        <p className="text-sm sm:text-base lg:text-lg text-gray-300 font-medium tracking-wide">{capability.description}</p>
                       </div>
                     </div>
-                    <ul className="space-y-4">
+                    <ul className="space-y-3 sm:space-y-4">
                       {capability.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center">
-                          <div className="w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 shadow-lg shadow-cyan-400/25">
+                        <li key={featureIndex} className="flex items-start sm:items-center">
+                          <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 shadow-lg shadow-cyan-400/25 mt-0.5 sm:mt-0">
                             <span className="text-black text-xs font-bold">✓</span>
                           </div>
-                          <span className="text-gray-300 text-lg font-medium tracking-wide">{feature}</span>
+                          <span className="text-gray-300 text-sm sm:text-base lg:text-lg font-medium tracking-wide">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -301,23 +301,23 @@ export default function Solutions() {
           <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-20">
-              <h2 className="text-6xl md:text-7xl font-black text-white mb-8 tracking-tight">
+            <div className="text-center mb-12 sm:mb-20">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 sm:mb-8 tracking-tight px-4">
                 Proven <span className="bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">Results</span>
               </h2>
-              <p className="text-2xl text-gray-300 max-w-4xl mx-auto tracking-wide">
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto tracking-wide px-4">
                 Real metrics from businesses that have transformed their operations with Autera
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               {results.map((result, index) => (
-                <div key={index} className="group relative bg-gradient-to-br from-gray-900/90 to-black/90 rounded-3xl p-10 shadow-2xl hover:shadow-cyan-500/25 transition-all duration-500 border border-cyan-400/30 hover:border-cyan-400/60 backdrop-blur-sm text-center">
+                <div key={index} className="group relative bg-gradient-to-br from-gray-900/90 to-black/90 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl hover:shadow-cyan-500/25 transition-all duration-500 border border-cyan-400/30 hover:border-cyan-400/60 backdrop-blur-sm text-center">
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
                   <div className="relative z-10">
-                    <div className="text-6xl font-black text-cyan-400 mb-4 tracking-tight">{result.metric}</div>
-                    <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">{result.label}</h3>
-                    <p className="text-gray-300 text-lg leading-relaxed">{result.description}</p>
+                    <div className="text-4xl sm:text-5xl lg:text-6xl font-black text-cyan-400 mb-3 sm:mb-4 tracking-tight">{result.metric}</div>
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2 sm:mb-3 tracking-tight">{result.label}</h3>
+                    <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed">{result.description}</p>
                   </div>
                 </div>
               ))}
@@ -332,26 +332,26 @@ export default function Solutions() {
           <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-20">
-              <h2 className="text-6xl md:text-7xl font-black text-white mb-8 tracking-tight">
+            <div className="text-center mb-12 sm:mb-20">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 sm:mb-8 tracking-tight px-4">
                 Client <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">Success</span>
               </h2>
-              <p className="text-2xl text-gray-300 max-w-4xl mx-auto tracking-wide">
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto tracking-wide px-4">
                 Hear from business leaders who've transformed their operations with Autera
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="group relative bg-gradient-to-br from-gray-900/90 to-black/90 rounded-3xl p-12 shadow-2xl hover:shadow-cyan-500/25 transition-all duration-500 border border-cyan-400/30 hover:border-cyan-400/60 backdrop-blur-sm">
+                <div key={index} className="group relative bg-gradient-to-br from-gray-900/90 to-black/90 rounded-3xl p-6 sm:p-8 lg:p-12 shadow-2xl hover:shadow-cyan-500/25 transition-all duration-500 border border-cyan-400/30 hover:border-cyan-400/60 backdrop-blur-sm">
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
                   <div className="relative z-10">
-                    <div className="text-6xl text-cyan-400 mb-6">"</div>
-                    <p className="text-2xl text-gray-300 mb-8 leading-relaxed font-medium tracking-wide">{testimonial.quote}</p>
-                    <div className="border-t border-cyan-400/30 pt-6">
-                      <p className="text-xl font-bold text-white mb-1">{testimonial.author}</p>
-                      <p className="text-lg text-cyan-300 font-medium">{testimonial.role}</p>
-                      <p className="text-gray-400 font-medium">{testimonial.company}</p>
+                    <div className="text-4xl sm:text-5xl lg:text-6xl text-cyan-400 mb-4 sm:mb-6">"</div>
+                    <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 leading-relaxed font-medium tracking-wide">{testimonial.quote}</p>
+                    <div className="border-t border-cyan-400/30 pt-4 sm:pt-6">
+                      <p className="text-lg sm:text-xl font-bold text-white mb-1">{testimonial.author}</p>
+                      <p className="text-base sm:text-lg text-cyan-300 font-medium">{testimonial.role}</p>
+                      <p className="text-sm sm:text-base text-gray-400 font-medium">{testimonial.company}</p>
                     </div>
                   </div>
                 </div>
@@ -367,20 +367,20 @@ export default function Solutions() {
           <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <div className="bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl p-20 border border-cyan-400/30 shadow-2xl">
-              <h2 className="text-6xl md:text-7xl font-black text-white mb-10 tracking-tight">
+            <div className="bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl p-6 sm:p-12 lg:p-20 border border-cyan-400/30 shadow-2xl">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 sm:mb-8 lg:mb-10 tracking-tight px-4">
                 Ready to <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Transform</span> Your Business?
               </h2>
-              <p className="text-2xl text-gray-300 mb-16 max-w-5xl mx-auto leading-relaxed tracking-wide">
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 sm:mb-12 lg:mb-16 max-w-5xl mx-auto leading-relaxed tracking-wide px-4">
                 Join hundreds of businesses that have already automated their operations and are seeing dramatic improvements in efficiency, profitability, and growth.
               </p>
-              <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
-                <Link href="/contact" className="inline-flex items-center px-16 py-8 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-3xl font-black text-2xl shadow-2xl hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-cyan-500/25 border border-cyan-400/50 tracking-wider">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 justify-center items-center px-4">
+                <Link href="/contact" className="inline-flex items-center px-8 sm:px-12 lg:px-16 py-6 sm:py-7 lg:py-8 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-3xl font-black text-lg sm:text-xl lg:text-2xl shadow-2xl hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-cyan-500/25 border border-cyan-400/50 tracking-wider w-full sm:w-auto text-center justify-center">
                   Get Your Free Business Audit
                 </Link>
                 <div className="text-center">
-                  <p className="text-cyan-300 text-lg font-bold tracking-wider mb-2">⏱️ Takes 30 minutes</p>
-                  <p className="text-gray-400 text-base tracking-wide">Get actionable insights & ROI projections</p>
+                  <p className="text-cyan-300 text-base sm:text-lg font-bold tracking-wider mb-1 sm:mb-2">⏱️ Takes 30 minutes</p>
+                  <p className="text-gray-400 text-sm sm:text-base tracking-wide">Get actionable insights & ROI projections</p>
                 </div>
               </div>
             </div>
