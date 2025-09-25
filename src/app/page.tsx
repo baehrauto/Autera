@@ -166,28 +166,28 @@ export default function Home() {
             <span className="tracking-wider uppercase">AI-Powered Business Automation</span>
           </div>
           
-          <h1 className="text-7xl md:text-8xl font-black text-white mb-8 leading-tight tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-6 sm:mb-8 leading-tight tracking-tight px-4">
             Your Operations. On{' '}
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent animate-pulse">
               AUTOPILOT
             </span>.
           </h1>
           
-          <p className="text-3xl md:text-4xl text-gray-300 max-w-5xl mx-auto mb-12 font-light leading-relaxed tracking-wide">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-300 max-w-5xl mx-auto mb-8 sm:mb-12 font-light leading-relaxed tracking-wide px-4">
             No chaos. No bottlenecks. Just flow.
           </p>
           
-          <div className="flex flex-col sm:flex-row justify-center gap-8 mb-12">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 mb-8 sm:mb-12 px-4">
             <Link 
               href="/contact"
-              className="group relative px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-2xl font-bold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-2 border border-cyan-400/50"
+              className="group relative px-6 sm:px-8 lg:px-10 py-4 sm:py-5 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-2xl font-bold text-base sm:text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-2 border border-cyan-400/50 w-full sm:w-auto text-center justify-center"
             >
               <span className="relative z-10 tracking-wider">Book a Free Automation Audit</span>
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
             <Link 
               href="/solutions"
-              className="px-10 py-5 bg-transparent text-cyan-300 rounded-2xl font-bold text-lg border-2 border-cyan-400/50 hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300 transform hover:-translate-y-2 backdrop-blur-sm"
+              className="px-6 sm:px-8 lg:px-10 py-4 sm:py-5 bg-transparent text-cyan-300 rounded-2xl font-bold text-base sm:text-lg border-2 border-cyan-400/50 hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300 transform hover:-translate-y-2 backdrop-blur-sm w-full sm:w-auto text-center justify-center"
             >
               See How Autera Works
             </Link>
@@ -203,18 +203,18 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-6xl md:text-7xl font-black text-white mb-8 tracking-tight">
+          <div className="text-center mb-12 sm:mb-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 sm:mb-8 tracking-tight px-4">
               The <span className="bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">Autera Promise</span>
             </h2>
-            <p className="text-2xl text-gray-300 max-w-4xl mx-auto tracking-wide">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto tracking-wide px-4">
               Your business, your systems, your success
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Full System Ownership */}
-            <div className="group relative bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl border border-cyan-400/30 p-10 hover:border-cyan-400/60 hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-500 transform hover:-translate-y-2">
+            <div className="group relative bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl border border-cyan-400/30 p-6 sm:p-8 lg:p-10 hover:border-cyan-400/60 hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-500 transform hover:-translate-y-2">
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
               <div className="relative z-10">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-cyan-400/25">
@@ -222,8 +222,8 @@ export default function Home() {
                     <div className="w-3 h-3 bg-white rounded-sm"></div>
                   </div>
                 </div>
-                <h3 className="text-3xl font-bold text-white mb-6 tracking-wide">Full System Ownership</h3>
-                <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6 tracking-wide">Full System Ownership</h3>
+                <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed mb-4 sm:mb-6">
                   You own every system we create. No vendor lock-in, no monthly subscriptions for the tools themselves. 
                   Complete control over your automation infrastructure.
                 </p>
@@ -240,8 +240,8 @@ export default function Home() {
                     <div className="w-4 h-2 bg-white rounded-sm"></div>
                   </div>
                 </div>
-                <h3 className="text-3xl font-bold text-white mb-6 tracking-wide">Team Training & Knowledge Transfer</h3>
-                <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6 tracking-wide">Team Training & Knowledge Transfer</h3>
+                <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed mb-4 sm:mb-6">
                   We don't just build it and leave. We train your team on how to use, maintain, and even modify 
                   the systems we create. Your team becomes self-sufficient.
                 </p>
@@ -258,8 +258,8 @@ export default function Home() {
                     <div className="w-3 h-3 bg-white rounded-sm"></div>
                   </div>
                 </div>
-                <h3 className="text-3xl font-bold text-white mb-6 tracking-wide">No Vendor Dependency</h3>
-                <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6 tracking-wide">No Vendor Dependency</h3>
+                <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed mb-4 sm:mb-6">
                   Your operations continue running even if our relationship changes. You have the code, 
                   the documentation, and the knowledge to keep everything running smoothly.
                 </p>
@@ -270,9 +270,9 @@ export default function Home() {
 
           {/* Bottom CTA */}
           <div className="text-center mt-16">
-            <div className="bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl border border-cyan-400/30 p-12 max-w-4xl mx-auto">
-              <h4 className="text-4xl font-bold text-white mb-6 tracking-wide">Partnership, Not Dependency</h4>
-              <p className="text-xl text-gray-300 leading-relaxed mb-8">
+            <div className="bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl border border-cyan-400/30 p-6 sm:p-8 lg:p-12 max-w-4xl mx-auto">
+              <h4 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6 tracking-wide">Partnership, Not Dependency</h4>
+              <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed mb-6 sm:mb-8">
                 We're here to empower your business, not create a permanent dependency. 
                 Your success is our success, and your independence is our goal.
               </p>
@@ -289,18 +289,18 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-6xl md:text-7xl font-black text-white mb-8 tracking-tight">
+          <div className="text-center mb-12 sm:mb-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 sm:mb-8 tracking-tight px-4">
               Our <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Products</span>
             </h2>
-            <p className="text-2xl text-gray-300 max-w-4xl mx-auto tracking-wide">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto tracking-wide px-4">
               Custom development solutions designed to elevate your digital presence and customer experience
             </p>
-              </div>
+          </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
             {/* Custom Website Development */}
-            <div className="group relative bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl border border-cyan-400/30 shadow-2xl hover:shadow-cyan-500/25 hover:border-cyan-400/60 transition-all duration-500 p-10 overflow-hidden">
+            <div className="group relative bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl border border-cyan-400/30 shadow-2xl hover:shadow-cyan-500/25 hover:border-cyan-400/60 transition-all duration-500 p-6 sm:p-8 lg:p-10 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute top-0 right-0 w-40 h-40 bg-cyan-400/20 rounded-full blur-3xl animate-pulse"></div>
               
@@ -310,23 +310,23 @@ export default function Home() {
                     <div className="w-8 h-8 bg-black rounded-lg"></div>
             </div>
                   <div>
-                    <h3 className="text-4xl font-black text-white mb-2 tracking-tight">Custom Websites</h3>
-                    <p className="text-lg text-cyan-300 font-bold tracking-wider">Bespoke Web Development</p>
-          </div>
+                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-2 tracking-tight">Custom Websites</h3>
+                    <p className="text-sm sm:text-base lg:text-lg text-cyan-300 font-bold tracking-wider">Bespoke Web Development</p>
+                  </div>
                 </div>
                 
-                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                <p className="text-base sm:text-lg lg:text-xl text-gray-300 mb-6 sm:mb-8 leading-relaxed">
                   Transform your online presence with custom-built websites that perfectly match your brand and business goals. From design to deployment, we create digital experiences that convert visitors into customers.
                 </p>
                 
-                <div className="space-y-6 mb-8">
-                  <h4 className="text-2xl font-bold text-cyan-300 mb-4">What's Included:</h4>
-                  <ul className="space-y-4">
+                <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
+                  <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-cyan-300 mb-3 sm:mb-4">What's Included:</h4>
+                  <ul className="space-y-3 sm:space-y-4">
                     <li className="flex items-start">
-                      <div className="w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
+                      <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-0.5 sm:mt-1 shadow-lg">
                         <span className="text-black text-xs font-bold">✓</span>
                       </div>
-                      <span className="text-gray-300 text-lg font-medium tracking-wide">Custom design and user experience tailored to your brand</span>
+                      <span className="text-gray-300 text-sm sm:text-base lg:text-lg font-medium tracking-wide">Custom design and user experience tailored to your brand</span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
