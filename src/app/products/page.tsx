@@ -10,7 +10,7 @@ export default function Products() {
       <Navbar />
       <main className="flex-grow">
         {/* Hero */}
-        <section className="relative bg-gradient-to-b from-black via-gray-900 to-black pt-32 pb-20 overflow-hidden">
+        <section className="relative bg-gradient-to-b from-black via-gray-900 to-black pt-20 sm:pt-24 md:pt-32 pb-16 sm:pb-20 overflow-hidden">
           {/* Futuristic Background Elements */}
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-blue-500/10"></div>
           <div className="absolute top-20 left-10 w-96 h-96 bg-cyan-400/20 rounded-full blur-3xl animate-pulse"></div>
@@ -22,47 +22,47 @@ export default function Products() {
           
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 rounded-full shadow-lg shadow-cyan-400/50"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <h1 className="text-7xl md:text-8xl font-black text-white mb-8 tracking-tight">Our Products</h1>
-            <p className="text-3xl md:text-4xl text-gray-300 max-w-5xl mx-auto font-light tracking-wide">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-6 sm:mb-8 tracking-tight px-4">Our Products</h1>
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-300 max-w-5xl mx-auto font-light tracking-wide px-4">
               Custom development solutions designed to elevate your digital presence and customer experience.
             </p>
           </div>
         </section>
 
         {/* Products Grid */}
-        <section className="py-24 bg-gradient-to-b from-black via-gray-900 to-black flex justify-center items-center relative overflow-hidden">
+        <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-black via-gray-900 to-black flex justify-center items-center relative overflow-hidden">
           {/* Futuristic Background */}
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.1)_0%,transparent_70%)]"></div>
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
           <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
           
-          <div className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch relative z-10">
+          <div className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-stretch relative z-10 px-4 sm:px-6 lg:px-8">
             {/* Custom Website Development Product */}
-            <div className="group relative bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl border border-cyan-400/30 shadow-2xl hover:shadow-cyan-500/25 hover:border-cyan-400/60 transition-all duration-500 p-10 flex flex-col min-h-[800px] overflow-hidden">
+            <div className="group relative bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl border border-cyan-400/30 shadow-2xl hover:shadow-cyan-500/25 hover:border-cyan-400/60 transition-all duration-500 p-6 sm:p-8 lg:p-10 flex flex-col min-h-[600px] sm:min-h-[700px] lg:min-h-[800px] overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute top-0 right-0 w-40 h-40 bg-cyan-400/20 rounded-full blur-3xl animate-pulse"></div>
               <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(6,182,212,0.05)_50%,transparent_75%)] bg-[size:20px_20px]"></div>
               
               <div className="relative z-10 flex flex-col flex-grow">
-                <div className="text-center mb-8">
-                  <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl mb-6 border border-cyan-400/30">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-lg flex items-center justify-center shadow-lg shadow-cyan-400/25">
-                      <div className="w-6 h-6 bg-black rounded-sm"></div>
+                <div className="text-center mb-6 sm:mb-8">
+                  <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl mb-4 sm:mb-6 border border-cyan-400/30">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-lg flex items-center justify-center shadow-lg shadow-cyan-400/25">
+                      <div className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 bg-black rounded-sm"></div>
                     </div>
                   </div>
-                  <h2 className="text-5xl md:text-6xl font-black text-white mb-4 tracking-wider">CUSTOM WEBSITES</h2>
-                  <div className="w-32 h-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 mx-auto rounded-full mb-6 shadow-lg shadow-cyan-400/50"></div>
-                  <p className="text-xl text-gray-300 font-medium tracking-wide">Bespoke web development tailored to your business needs</p>
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-white mb-3 sm:mb-4 tracking-wider">CUSTOM WEBSITES</h2>
+                  <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 mx-auto rounded-full mb-4 sm:mb-6 shadow-lg shadow-cyan-400/50"></div>
+                  <p className="text-sm sm:text-base lg:text-xl text-gray-300 font-medium tracking-wide">Bespoke web development tailored to your business needs</p>
                 </div>
                 
                 <div className="flex-grow">
-                  <div className="space-y-6 mb-8">
+                  <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
                     <div>
-                      <h3 className="text-2xl font-bold text-cyan-300 mb-4">What's Included</h3>
-                      <ul className="space-y-4 text-lg text-gray-300">
-                        <li className="flex items-start space-x-4">
-                          <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-cyan-400/25 mt-1">
-                            <span className="text-black text-sm font-bold">✓</span>
+                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-cyan-300 mb-3 sm:mb-4">What's Included</h3>
+                      <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base lg:text-lg text-gray-300">
+                        <li className="flex items-start space-x-3 sm:space-x-4">
+                          <div className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-cyan-400/25 mt-0.5 sm:mt-1">
+                            <span className="text-black text-xs sm:text-sm font-bold">✓</span>
                           </div>
                           <span className="font-medium tracking-wide">Custom design and user experience</span>
                         </li>
