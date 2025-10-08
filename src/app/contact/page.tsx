@@ -1,6 +1,65 @@
+'use client';
+
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import Navbar from '@/components/Navbar'
+import { ContactForm } from '@/lib/types';
 
 export default function Contact() {
+  const router = useRouter();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
+  const [formData, setFormData] = useState<ContactForm>({
+    name: '',
+    email: '',
+    company: '',
+    message: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+    // Clear error when user starts typing
+    if (error) setError('');
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        // Redirect to success page with form data
+        const params = new URLSearchParams({
+          name: formData.name,
+          email: formData.email,
+          company: formData.company || '',
+          message: formData.message
+        });
+        router.push(`/success?${params.toString()}`);
+      } else {
+        setError(result.error || 'Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      setError('Network error. Please check your connection and try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <main className="min-h-screen bg-black text-white overflow-hidden">
       <Navbar />
@@ -34,7 +93,14 @@ export default function Contact() {
           <div className="flex justify-center">
             <div className="w-full max-w-2xl bg-gradient-to-br from-gray-900/90 to-black/90 p-8 rounded-3xl shadow-2xl border border-cyan-400/30 backdrop-blur-sm">
               <h2 className="text-3xl font-black text-cyan-300 mb-8 tracking-wider text-center">Get in Touch</h2>
-              <form className="space-y-6">
+              
+              {error && (
+                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-xl text-red-300 text-center">
+                  {error}
+                </div>
+              )}
+              
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div>
                   <label htmlFor="name" className="block text-base font-bold text-gray-300 mb-2 tracking-wide">
                     Name
@@ -43,6 +109,9 @@ export default function Contact() {
                     type="text"
                     id="name"
                     name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
                     className="mt-1 block w-full rounded-xl bg-gray-800/50 border border-cyan-400/30 text-white placeholder-gray-400 shadow-lg focus:border-cyan-400 focus:ring-cyan-400/50 px-4 py-3 text-base backdrop-blur-sm"
                     placeholder="Your full name"
                   />
@@ -55,6 +124,9 @@ export default function Contact() {
                     type="email"
                     id="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
                     className="mt-1 block w-full rounded-xl bg-gray-800/50 border border-cyan-400/30 text-white placeholder-gray-400 shadow-lg focus:border-cyan-400 focus:ring-cyan-400/50 px-4 py-3 text-base backdrop-blur-sm"
                     placeholder="your.email@company.com"
                   />
@@ -67,6 +139,8 @@ export default function Contact() {
                     type="text"
                     id="company"
                     name="company"
+                    value={formData.company}
+                    onChange={handleInputChange}
                     className="mt-1 block w-full rounded-xl bg-gray-800/50 border border-cyan-400/30 text-white placeholder-gray-400 shadow-lg focus:border-cyan-400 focus:ring-cyan-400/50 px-4 py-3 text-base backdrop-blur-sm"
                     placeholder="Your company name"
                   />
@@ -78,7 +152,10 @@ export default function Contact() {
                   <textarea
                     id="message"
                     name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
                     rows={3}
+                    required
                     className="mt-1 block w-full rounded-xl bg-gray-800/50 border border-cyan-400/30 text-white placeholder-gray-400 shadow-lg focus:border-cyan-400 focus:ring-cyan-400/50 px-4 py-3 text-base backdrop-blur-sm resize-none"
                     placeholder="Tell us about your automation needs..."
                   />
@@ -86,9 +163,14 @@ export default function Contact() {
                 <div>
                   <button
                     type="submit"
-                    className="w-full py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-xl font-black text-lg shadow-2xl hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-cyan-500/25 border border-cyan-400/50 tracking-wider"
+                    disabled={isSubmitting}
+                    className={`w-full py-4 rounded-xl font-black text-lg shadow-2xl transition-all duration-300 border border-cyan-400/50 tracking-wider ${
+                      isSubmitting
+                        ? 'bg-gray-600 text-gray-300 cursor-not-allowed'
+                        : 'bg-gradient-to-r from-cyan-500 to-blue-500 text-black hover:from-cyan-400 hover:to-blue-400 transform hover:-translate-y-1 hover:shadow-cyan-500/25'
+                    }`}
                   >
-                    Send Message
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
                 </div>
               </form>

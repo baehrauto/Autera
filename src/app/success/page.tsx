@@ -8,18 +8,31 @@ import { useSearchParams } from 'next/navigation';
 function SuccessContent() {
   const searchParams = useSearchParams();
   const [status, setStatus] = useState<'loading' | 'success' | 'error'>('loading');
+  const [successType, setSuccessType] = useState<'payment' | 'contact' | null>(null);
   const sessionId = searchParams.get('session_id');
+  const name = searchParams.get('name');
+  const email = searchParams.get('email');
 
   useEffect(() => {
-    if (!sessionId) {
-      setStatus('error');
+    // Check if this is a contact form success
+    if (name && email) {
+      setSuccessType('contact');
+      setStatus('success');
       return;
     }
 
-    // Here you would typically verify the session with your backend
-    // and update the user's subscription status
-    setStatus('success');
-  }, [sessionId]);
+    // Check if this is a payment success
+    if (sessionId) {
+      setSuccessType('payment');
+      // Here you would typically verify the session with your backend
+      // and update the user's subscription status
+      setStatus('success');
+      return;
+    }
+
+    // No valid parameters found
+    setStatus('error');
+  }, [sessionId, name, email]);
 
   return (
     <main className="min-h-screen bg-gray-50">
@@ -35,7 +48,7 @@ function SuccessContent() {
               </h1>
             </>
           )}
-          {status === 'success' && (
+          {status === 'success' && successType === 'payment' && (
             <>
               <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
                 <svg
@@ -64,6 +77,48 @@ function SuccessContent() {
                   className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-bold rounded-2xl shadow-lg text-white bg-blue-600 hover:bg-blue-700"
                 >
                   Go to Dashboard
+                </Link>
+              </div>
+            </>
+          )}
+          {status === 'success' && successType === 'contact' && (
+            <>
+              <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
+                <svg
+                  className="h-6 w-6 text-green-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+              <h1 className="mt-6 text-3xl font-extrabold text-gray-900 mb-4">
+                Thank you for reaching out, {name}!
+              </h1>
+              <p className="mt-4 text-gray-700 text-lg">
+                We've received your message and will get back to you at <strong>{email}</strong> within 24 hours.
+              </p>
+              <p className="mt-2 text-gray-600 text-base">
+                Our team is excited to learn about your automation needs and help you streamline your business processes.
+              </p>
+              <div className="mt-10 space-y-4">
+                <Link
+                  href="/"
+                  className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-bold rounded-2xl shadow-lg text-white bg-blue-600 hover:bg-blue-700 mr-4"
+                >
+                  Back to Home
+                </Link>
+                <Link
+                  href="/services"
+                  className="inline-flex items-center px-8 py-4 border border-gray-300 text-lg font-bold rounded-2xl shadow-lg text-gray-700 bg-white hover:bg-gray-50"
+                >
+                  View Our Services
                 </Link>
               </div>
             </>

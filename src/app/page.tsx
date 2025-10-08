@@ -98,7 +98,7 @@ export default function Home() {
       description: 'Automated inbox management'
     },
     {
-      number: '92%',
+      number: '100%',
       label: 'Customer satisfaction',
       description: 'Faster, more consistent service'
     },
@@ -190,6 +190,12 @@ export default function Home() {
               className="px-6 sm:px-8 lg:px-10 py-4 sm:py-5 bg-transparent text-cyan-300 rounded-2xl font-bold text-base sm:text-lg border-2 border-cyan-400/50 hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300 transform hover:-translate-y-2 backdrop-blur-sm w-full sm:w-auto text-center justify-center"
             >
               See How Autera Works
+            </Link>
+            <Link 
+              href="/portfolio"
+              className="px-6 sm:px-8 lg:px-10 py-4 sm:py-5 bg-transparent text-purple-300 rounded-2xl font-bold text-base sm:text-lg border-2 border-purple-400/50 hover:bg-purple-400/10 hover:border-purple-400 transition-all duration-300 transform hover:-translate-y-2 backdrop-blur-sm w-full sm:w-auto text-center justify-center"
+            >
+              View Our Portfolio
             </Link>
           </div>
         </div> {/* End .max-w-7xl mx-auto text-center */}

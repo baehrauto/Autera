@@ -67,15 +67,18 @@ export default function Navbar() {
                 <Link href="/partnerships" className="text-gray-900 font-semibold text-base hover:text-blue-600 transition-colors px-2 py-1 rounded-xl hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-200">
                   Partnerships
                 </Link>
+                <Link href="/portfolio" className="text-gray-900 font-semibold text-base hover:text-blue-600 transition-colors px-2 py-1 rounded-xl hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-200">
+                  Portfolio
+                </Link>
                 <Link href="/contact" className="text-gray-900 font-semibold text-base hover:text-blue-600 transition-colors px-2 py-1 rounded-xl hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-200">
                   Contact
                 </Link>
                 <div className="flex items-center">
                   <Link 
-                    href="/login" 
+                    href="/contact" 
                     className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-3 rounded-2xl text-base font-bold shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-cyan-200"
                   >
-                    Login
+                    Book a Call
                   </Link>
                 </div>
               </>
@@ -126,6 +129,13 @@ export default function Navbar() {
                     Partnerships
                   </Link>
                   <Link 
+                    href="/portfolio" 
+                    className="block text-gray-900 font-semibold text-lg hover:text-blue-600 transition-colors px-4 py-3 rounded-xl hover:bg-blue-50"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Portfolio
+                  </Link>
+                  <Link 
                     href="/contact" 
                     className="block text-gray-900 font-semibold text-lg hover:text-blue-600 transition-colors px-4 py-3 rounded-xl hover:bg-blue-50"
                     onClick={() => setIsMobileMenuOpen(false)}
@@ -134,11 +144,11 @@ export default function Navbar() {
                   </Link>
                   <div className="pt-4">
                     <Link 
-                      href="/login" 
+                      href="/contact" 
                       className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-4 rounded-2xl text-lg font-bold shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      Login
+                      Book a Call
                     </Link>
                   </div>
                 </>
