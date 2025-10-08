@@ -6,7 +6,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export default function VoiceAgentsPortfolio() {
-  const projects = [
+  const projects: any[] = [
     // Voice agent projects will be added here as they are completed
   ];
 
@@ -76,70 +76,6 @@ export default function VoiceAgentsPortfolio() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 hidden">
-            {projects.map((project, index) => (
-              <div
-                key={project.name}
-                className="group relative bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl border border-purple-400/30 p-6 sm:p-8 hover:border-purple-400/60 hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-500 transform hover:-translate-y-2"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
-                <div className="absolute top-0 right-0 w-40 h-40 bg-purple-400/20 rounded-full blur-3xl animate-pulse"></div>
-                
-                <div className="relative z-10">
-                  <div className="flex items-center mb-6">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${project.gradient} rounded-2xl flex items-center justify-center mr-4 shadow-lg shadow-purple-400/25`}>
-                      <Image
-                        src={project.image}
-                        alt={project.name}
-                        width={32}
-                        height={32}
-                        className="rounded"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-xl sm:text-2xl font-black text-white mb-1 tracking-tight">{project.name}</h3>
-                      <div className="text-sm text-purple-300 font-bold tracking-wider">Voice AI</div>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-300 text-sm sm:text-base mb-6 leading-relaxed">
-                    {project.description}
-                  </p>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-purple-300 font-bold text-sm mb-3">Key Features:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {project.features.map((feature, featureIndex) => (
-                        <span key={featureIndex} className="px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full border border-purple-400/30">
-                          {feature}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-purple-300 font-bold text-sm mb-3">Technologies:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech, techIndex) => (
-                        <span key={techIndex} className="px-3 py-1 bg-gray-800/50 text-gray-300 text-xs rounded-full border border-gray-600/30">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <div className="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 rounded-2xl p-4 border border-purple-400/30">
-                    <div className="text-center">
-                      <div className="text-2xl font-black text-white mb-1">
-                        {project.results}
-                      </div>
-                      <p className="text-gray-300 text-sm">Measured Impact</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

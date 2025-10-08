@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ContactForm } from '@/lib/types';
-import { MondayClient } from 'monday-sdk-js';
+import MondaySdk from 'monday-sdk-js';
 
 export async function POST(request: NextRequest) {
   try {
@@ -39,7 +39,7 @@ export async function POST(request: NextRequest) {
       const mondayBoardId = process.env.MONDAY_BOARD_ID;
       
       if (mondayApiToken && mondayBoardId) {
-        const monday = new MondayClient({ token: mondayApiToken });
+        const monday = MondaySdk({ token: mondayApiToken });
         
         // Create a new item in Monday.com
         const mutation = `
