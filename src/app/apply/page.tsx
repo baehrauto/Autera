@@ -1,71 +1,33 @@
 'use client';
 
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import Navbar from '@/components/Navbar'
-import { ContactForm } from '@/lib/types';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import { useEffect } from 'react';
 
-export default function Contact() {
-  const router = useRouter();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [error, setError] = useState('');
-  const [formData, setFormData] = useState<ContactForm>({
-    name: '',
-    email: '',
-    company: '',
-    message: ''
-  });
+export default function Apply() {
+  useEffect(() => {
+    // Load Calendly script
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.head.appendChild(script);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-    // Clear error when user starts typing
-    if (error) setError('');
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setError('');
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        // Redirect to success page with form data
-        const params = new URLSearchParams({
-          name: formData.name,
-          email: formData.email,
-          company: formData.company || '',
-          message: formData.message
-        });
-        router.push(`/success?${params.toString()}`);
-      } else {
-        setError(result.error || 'Something went wrong. Please try again.');
+    return () => {
+      // Cleanup script on component unmount
+      const existingScript = document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]');
+      if (existingScript) {
+        document.head.removeChild(existingScript);
       }
-    } catch (err) {
-      setError('Network error. Please check your connection and try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+    };
+  }, []);
+
   return (
-    <main className="min-h-screen bg-black text-white overflow-hidden">
+    <div className="min-h-screen flex flex-col bg-black text-white overflow-hidden">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-black via-gray-900 to-black pt-36 pb-24 overflow-hidden">
+      <section className="relative pt-32 pb-24 px-4 overflow-hidden">
         {/* Futuristic Background Elements */}
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-blue-500/10"></div>
         <div className="absolute top-20 left-10 w-96 h-96 bg-cyan-400/20 rounded-full blur-3xl animate-pulse"></div>
@@ -75,10 +37,19 @@ export default function Contact() {
         {/* Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
         
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 rounded-full shadow-lg shadow-cyan-400/50"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h1 className="text-7xl md:text-8xl font-black text-white mb-8 tracking-tight">Apply for Partnership</h1>
-          <p className="text-3xl md:text-4xl text-gray-300 max-w-4xl mx-auto mb-6 font-light tracking-wide">We accept a limited number of new partnerships each quarter</p>
+        <div className="relative max-w-7xl mx-auto text-center">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-full text-cyan-300 text-sm font-medium mb-8 border border-cyan-500/30">
+            <div className="w-3 h-3 bg-cyan-400 rounded-full mr-3 animate-pulse shadow-lg shadow-cyan-400/50"></div>
+            <span className="tracking-wider uppercase">Partnership Application</span>
+          </div>
+          
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-6 sm:mb-8 leading-tight tracking-tight px-4">
+            Apply for <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">Partnership</span>
+          </h1>
+          
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-300 max-w-5xl mx-auto mb-8 sm:mb-12 font-light leading-relaxed tracking-wide px-4">
+            We accept a limited number of new partnerships each quarter. Our systems are designed for companies that operate at a higher standard.
+          </p>
         </div>
       </section>
 
@@ -102,11 +73,12 @@ export default function Contact() {
           <div className="bg-gradient-to-br from-gray-900/90 to-black/90 rounded-3xl shadow-2xl border border-cyan-400/30 backdrop-blur-sm p-8">
             {/* Calendly inline widget begin */}
             <div className="calendly-inline-widget" data-url="https://calendly.com/greg-autera" style={{minWidth: '320px', height: '700px'}}></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             {/* Calendly inline widget end */}
           </div>
         </div>
       </section>
-    </main>
-  )
-} 
+
+      <Footer />
+    </div>
+  );
+}

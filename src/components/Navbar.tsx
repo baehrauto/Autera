@@ -75,10 +75,10 @@ export default function Navbar() {
                 </Link>
                 <div className="flex items-center">
                   <Link 
-                    href="/contact" 
+                    href="/apply" 
                     className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-3 rounded-2xl text-base font-bold shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-cyan-200"
                   >
-                    Book a Call
+                    Apply for Partnership
                   </Link>
                 </div>
               </>
@@ -144,11 +144,11 @@ export default function Navbar() {
                   </Link>
                   <div className="pt-4">
                     <Link 
-                      href="/contact" 
+                      href="/apply" 
                       className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-4 rounded-2xl text-lg font-bold shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      Book a Call
+                      Apply for Partnership
                     </Link>
                   </div>
                 </>

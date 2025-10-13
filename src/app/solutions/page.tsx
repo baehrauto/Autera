@@ -181,17 +181,17 @@ export default function Solutions() {
                 AUTOMATION
               </span>
               <br />
-              <span className="text-white">SOLUTIONS</span>
+              <span className="text-white">INFRASTRUCTURE</span>
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-300 max-w-5xl mx-auto mb-8 sm:mb-12 font-light tracking-wide leading-relaxed px-4">
-              Transform your business operations with intelligent automation that works 24/7 to drive growth, reduce costs, and eliminate human error.
+              We design invisible systems that run your business with precision. Quiet. Efficient. Always on.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center px-4">
-              <Link href="/contact" className="inline-flex items-center px-6 sm:px-12 py-4 sm:py-6 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-2xl font-black text-lg sm:text-xl shadow-2xl hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-cyan-500/25 border border-cyan-400/50 tracking-wider w-full sm:w-auto text-center justify-center">
-                Get Your Free Audit
+              <Link href="/apply" className="inline-flex items-center px-6 sm:px-12 py-4 sm:py-6 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-2xl font-black text-lg sm:text-xl shadow-2xl hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-cyan-500/25 border border-cyan-400/50 tracking-wider w-full sm:w-auto text-center justify-center">
+                Apply for Partnership
               </Link>
               <Link href="/products" className="inline-flex items-center px-6 sm:px-12 py-4 sm:py-6 border-2 border-cyan-400/50 text-cyan-300 rounded-2xl font-bold text-lg sm:text-xl hover:bg-cyan-400/10 transition-all duration-300 tracking-wider w-full sm:w-auto text-center justify-center">
-                View Our Products
+                View Our Systems
               </Link>
             </div>
           </div>
@@ -209,7 +209,7 @@ export default function Solutions() {
                 Our <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Process</span>
               </h2>
               <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto tracking-wide px-4">
-                A proven methodology that transforms businesses from manual chaos to automated excellence
+                A proven methodology that transforms companies from operational chaos to precision excellence
               </p>
             </div>
 
@@ -261,7 +261,7 @@ export default function Solutions() {
                 Core <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Capabilities</span>
               </h2>
               <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto tracking-wide px-4">
-                Comprehensive automation solutions that cover every aspect of your business operations
+                Comprehensive infrastructure solutions that cover every aspect of your operational excellence
               </p>
             </div>
 
@@ -376,15 +376,15 @@ export default function Solutions() {
                 Ready to <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Transform</span> Your Business?
               </h2>
               <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 sm:mb-12 lg:mb-16 max-w-5xl mx-auto leading-relaxed tracking-wide px-4">
-                Join hundreds of businesses that have already automated their operations and are seeing dramatic improvements in efficiency, profitability, and growth.
+                Join companies that have already established operational infrastructure and are seeing dramatic improvements in precision, efficiency, and excellence.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 justify-center items-center px-4">
-                <Link href="/contact" className="inline-flex items-center px-8 sm:px-12 lg:px-16 py-6 sm:py-7 lg:py-8 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-3xl font-black text-lg sm:text-xl lg:text-2xl shadow-2xl hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-cyan-500/25 border border-cyan-400/50 tracking-wider w-full sm:w-auto text-center justify-center">
-                  Get Your Free Business Audit
+                <Link href="/apply" className="inline-flex items-center px-8 sm:px-12 lg:px-16 py-6 sm:py-7 lg:py-8 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-3xl font-black text-lg sm:text-xl lg:text-2xl shadow-2xl hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-cyan-500/25 border border-cyan-400/50 tracking-wider w-full sm:w-auto text-center justify-center">
+                  Apply for Partnership
                 </Link>
                 <div className="text-center">
-                  <p className="text-cyan-300 text-base sm:text-lg font-bold tracking-wider mb-1 sm:mb-2">⏱️ Takes 30 minutes</p>
-                  <p className="text-gray-400 text-sm sm:text-base tracking-wide">Get actionable insights & ROI projections</p>
+                  <p className="text-cyan-300 text-base sm:text-lg font-bold tracking-wider mb-1 sm:mb-2">⏱️ Reserved for qualified companies</p>
+                  <p className="text-gray-400 text-sm sm:text-base tracking-wide">Our systems are designed for companies that operate at a higher standard</p>
                 </div>
               </div>
             </div>

@@ -163,39 +163,39 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-full text-cyan-300 text-sm font-medium mb-8 border border-cyan-500/30">
             <div className="w-3 h-3 bg-cyan-400 rounded-full mr-3 animate-pulse shadow-lg shadow-cyan-400/50"></div>
-            <span className="tracking-wider uppercase">AI-Powered Business Automation</span>
+            <span className="tracking-wider uppercase">Automation Infrastructure</span>
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-6 sm:mb-8 leading-tight tracking-tight px-4">
-            Your Operations. On{' '}
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent animate-pulse">
-              AUTOPILOT
+            We design invisible systems that run your business with{' '}
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+              precision
             </span>.
           </h1>
           
           <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-300 max-w-5xl mx-auto mb-8 sm:mb-12 font-light leading-relaxed tracking-wide px-4">
-            No chaos. No bottlenecks. Just flow.
+            Autera builds automation infrastructure for high-performance teams. Quiet. Efficient. Always on.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 mb-8 sm:mb-12 px-4">
             <Link 
-              href="/contact"
+              href="/apply"
               className="group relative px-6 sm:px-8 lg:px-10 py-4 sm:py-5 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-2xl font-bold text-base sm:text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-2 border border-cyan-400/50 w-full sm:w-auto text-center justify-center"
             >
-              <span className="relative z-10 tracking-wider">Book a Free Automation Audit</span>
+              <span className="relative z-10 tracking-wider">Apply for Partnership</span>
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
             <Link 
               href="/solutions"
               className="px-6 sm:px-8 lg:px-10 py-4 sm:py-5 bg-transparent text-cyan-300 rounded-2xl font-bold text-base sm:text-lg border-2 border-cyan-400/50 hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300 transform hover:-translate-y-2 backdrop-blur-sm w-full sm:w-auto text-center justify-center"
             >
-              See How Autera Works
+              View Our Systems
             </Link>
             <Link 
               href="/portfolio"
               className="px-6 sm:px-8 lg:px-10 py-4 sm:py-5 bg-transparent text-purple-300 rounded-2xl font-bold text-base sm:text-lg border-2 border-purple-400/50 hover:bg-purple-400/10 hover:border-purple-400 transition-all duration-300 transform hover:-translate-y-2 backdrop-blur-sm w-full sm:w-auto text-center justify-center"
             >
-              View Our Portfolio
+              See Our Work
             </Link>
           </div>
         </div> {/* End .max-w-7xl mx-auto text-center */}
@@ -211,10 +211,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12 sm:mb-20">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 sm:mb-8 tracking-tight px-4">
-              The <span className="bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">Autera Promise</span>
+              The <span className="bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">Autera Standard</span>
             </h2>
             <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto tracking-wide px-4">
-              Your business, your systems, your success
+              Precision in motion. Automation, engineered.
             </p>
           </div>
 
@@ -228,10 +228,10 @@ export default function Home() {
                     <div className="w-3 h-3 bg-white rounded-sm"></div>
                   </div>
                 </div>
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6 tracking-wide">Full System Ownership</h3>
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6 tracking-wide">Complete Ownership</h3>
                 <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed mb-4 sm:mb-6">
-                  You own every system we create. No vendor lock-in, no monthly subscriptions for the tools themselves. 
-                  Complete control over your automation infrastructure.
+                  Every system we engineer becomes yours. No dependencies, no limitations. 
+                  Your infrastructure, your control, your competitive advantage.
                 </p>
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent"></div>
               </div>
@@ -246,10 +246,10 @@ export default function Home() {
                     <div className="w-4 h-2 bg-white rounded-sm"></div>
                   </div>
                 </div>
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6 tracking-wide">Team Training & Knowledge Transfer</h3>
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6 tracking-wide">Knowledge Transfer</h3>
                 <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed mb-4 sm:mb-6">
-                  We don't just build it and leave. We train your team on how to use, maintain, and even modify 
-                  the systems we create. Your team becomes self-sufficient.
+                  We don't simply deliver systems. We transfer complete operational knowledge. 
+                  Your team masters the infrastructure, ensuring continuous excellence.
                 </p>
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-blue-400/50 to-transparent"></div>
               </div>
@@ -264,10 +264,10 @@ export default function Home() {
                     <div className="w-3 h-3 bg-white rounded-sm"></div>
                   </div>
                 </div>
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6 tracking-wide">No Vendor Dependency</h3>
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6 tracking-wide">Operational Independence</h3>
                 <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed mb-4 sm:mb-6">
-                  Your operations continue running even if our relationship changes. You have the code, 
-                  the documentation, and the knowledge to keep everything running smoothly.
+                  Your systems operate independently. Complete documentation, full source code, 
+                  and comprehensive knowledge transfer ensure uninterrupted excellence.
                 </p>
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-purple-400/50 to-transparent"></div>
               </div>
@@ -277,10 +277,10 @@ export default function Home() {
           {/* Bottom CTA */}
           <div className="text-center mt-16">
             <div className="bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl border border-cyan-400/30 p-6 sm:p-8 lg:p-12 max-w-4xl mx-auto">
-              <h4 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6 tracking-wide">Partnership, Not Dependency</h4>
+              <h4 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6 tracking-wide">Built for Discipline</h4>
               <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed mb-6 sm:mb-8">
-                We're here to empower your business, not create a permanent dependency. 
-                Your success is our success, and your independence is our goal.
+                We engineer systems for companies that demand excellence. 
+                Your operational superiority becomes our standard.
               </p>
               <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 mx-auto rounded-full"></div>
             </div>
@@ -297,10 +297,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12 sm:mb-20">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 sm:mb-8 tracking-tight px-4">
-              Our <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Products</span>
+              Our <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Systems</span>
             </h2>
             <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto tracking-wide px-4">
-              Custom development solutions designed to elevate your digital presence and customer experience
+              Custom-engineered infrastructure for high-performance operations
             </p>
           </div>
 
@@ -316,47 +316,48 @@ export default function Home() {
                     <div className="w-8 h-8 bg-black rounded-lg"></div>
             </div>
                   <div>
-                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-2 tracking-tight">Custom Websites</h3>
-                    <p className="text-sm sm:text-base lg:text-lg text-cyan-300 font-bold tracking-wider">Bespoke Web Development</p>
+                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-2 tracking-tight">Autera Sites</h3>
+                    <p className="text-sm sm:text-base lg:text-lg text-cyan-300 font-bold tracking-wider">Operational Gateways</p>
                   </div>
                 </div>
                 
                 <p className="text-base sm:text-lg lg:text-xl text-gray-300 mb-6 sm:mb-8 leading-relaxed">
-                  Transform your online presence with custom-built websites that perfectly match your brand and business goals. From design to deployment, we create digital experiences that convert visitors into customers.
+                  Operational gateways that convert attention directly into workflow. 
+                  Every interaction engineered to drive business forward with precision.
                 </p>
                 
                 <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
-                  <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-cyan-300 mb-3 sm:mb-4">What's Included:</h4>
+                  <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-cyan-300 mb-3 sm:mb-4">System Architecture:</h4>
                   <ul className="space-y-3 sm:space-y-4">
                     <li className="flex items-start">
                       <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-0.5 sm:mt-1 shadow-lg">
                         <span className="text-black text-xs font-bold">✓</span>
                       </div>
-                      <span className="text-gray-300 text-sm sm:text-base lg:text-lg font-medium tracking-wide">Custom design and user experience tailored to your brand</span>
+                      <span className="text-gray-300 text-sm sm:text-base lg:text-lg font-medium tracking-wide">Precision-engineered user experience for maximum conversion</span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
                         <span className="text-black text-xs font-bold">✓</span>
                       </div>
-                      <span className="text-gray-300 text-lg font-medium tracking-wide">Responsive design that works perfectly on all devices</span>
+                      <span className="text-gray-300 text-lg font-medium tracking-wide">Universal compatibility across all operational environments</span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
                         <span className="text-black text-xs font-bold">✓</span>
                       </div>
-                      <span className="text-gray-300 text-lg font-medium tracking-wide">Content management system for easy updates</span>
+                      <span className="text-gray-300 text-lg font-medium tracking-wide">Intelligent content management for seamless operations</span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
                         <span className="text-black text-xs font-bold">✓</span>
                       </div>
-                      <span className="text-gray-300 text-lg font-medium tracking-wide">SEO optimization and performance tuning</span>
+                      <span className="text-gray-300 text-lg font-medium tracking-wide">Performance optimization for maximum operational efficiency</span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
                         <span className="text-black text-xs font-bold">✓</span>
                       </div>
-                      <span className="text-gray-300 text-lg font-medium tracking-wide">Hosting setup and ongoing maintenance</span>
+                      <span className="text-gray-300 text-lg font-medium tracking-wide">Infrastructure deployment and continuous optimization</span>
                     </li>
                   </ul>
                 </div>
@@ -364,11 +365,11 @@ export default function Home() {
                 <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl p-6 border border-cyan-400/30">
                   <div className="text-center">
                     <div className="text-4xl font-black text-white mb-2">
-                      Custom Pricing
+                      Reserved for Qualified Companies
                     </div>
-                    <p className="text-gray-300 text-lg mb-6">Get a personalized quote based on your specific requirements</p>
-                    <Link href="/contact" className="inline-block px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-xl font-bold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-1 border border-cyan-400/50">
-                      Get Your Custom Quote
+                    <p className="text-gray-300 text-lg mb-6">Apply for partnership to access our systems</p>
+                    <Link href="/apply" className="inline-block px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-xl font-bold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-1 border border-cyan-400/50">
+                      Apply for Partnership
                     </Link>
                   </div>
                 </div>
@@ -387,54 +388,55 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="text-4xl font-black text-white mb-2 tracking-tight">
-                      <span className="bg-gradient-to-r from-purple-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent">Voice Agents</span>
+                      <span className="bg-gradient-to-r from-purple-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent">Autera AI</span>
                     </h3>
-                    <p className="text-lg text-purple-300 font-bold tracking-wider">AI-Powered Voice Assistants</p>
+                    <p className="text-lg text-purple-300 font-bold tracking-wider">Thinking Layer for Precision</p>
                   </div>
                 </div>
                 
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Deploy intelligent voice assistants that handle customer interactions 24/7. Our AI-powered voice agents understand context, provide personalized responses, and seamlessly hand off to humans when needed.
+                  A thinking layer built for precision, not a chatbot. 
+                  Intelligent systems that understand context, execute decisions, and maintain operational excellence.
                 </p>
                 
                 <div className="space-y-6 mb-8">
-                  <h4 className="text-2xl font-bold text-purple-300 mb-4">Capabilities:</h4>
+                  <h4 className="text-2xl font-bold text-purple-300 mb-4">System Capabilities:</h4>
                   <ul className="space-y-4">
                     <li className="flex items-start">
                       <div className="w-6 h-6 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
                         <span className="text-black text-xs font-bold">✓</span>
                       </div>
-                      <span className="text-gray-300 text-lg font-medium tracking-wide">Natural conversation and context understanding</span>
+                      <span className="text-gray-300 text-lg font-medium tracking-wide">Advanced contextual reasoning and decision execution</span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-6 h-6 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
                         <span className="text-black text-xs font-bold">✓</span>
                       </div>
-                      <span className="text-gray-300 text-lg font-medium tracking-wide">Custom voice training and personality design</span>
+                      <span className="text-gray-300 text-lg font-medium tracking-wide">Custom intelligence architecture for your operations</span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-6 h-6 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
                         <span className="text-black text-xs font-bold">✓</span>
                       </div>
-                      <span className="text-gray-300 text-lg font-medium tracking-wide">Integration with your existing systems and databases</span>
+                      <span className="text-gray-300 text-lg font-medium tracking-wide">Seamless integration with your operational infrastructure</span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-6 h-6 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
                         <span className="text-black text-xs font-bold">✓</span>
                       </div>
-                      <span className="text-gray-300 text-lg font-medium tracking-wide">Multi-language support and regional accents</span>
+                      <span className="text-gray-300 text-lg font-medium tracking-wide">Universal operational language support</span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-6 h-6 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
                         <span className="text-black text-xs font-bold">✓</span>
                       </div>
-                      <span className="text-gray-300 text-lg font-medium tracking-wide">Real-time analytics and conversation insights</span>
+                      <span className="text-gray-300 text-lg font-medium tracking-wide">Real-time operational intelligence and performance analytics</span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-6 h-6 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
                         <span className="text-black text-xs font-bold">✓</span>
                       </div>
-                      <span className="text-gray-300 text-lg font-medium tracking-wide">24/7 availability and seamless handoff to humans</span>
+                      <span className="text-gray-300 text-lg font-medium tracking-wide">Continuous operational availability with intelligent escalation</span>
                     </li>
                   </ul>
                 </div>
@@ -442,11 +444,11 @@ export default function Home() {
                 <div className="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 rounded-2xl p-6 border border-purple-400/30">
                   <div className="text-center">
                     <div className="text-4xl font-black text-white mb-2">
-                      Custom Pricing
+                      Reserved for Qualified Companies
                     </div>
-                    <p className="text-gray-300 text-lg mb-6">Get a personalized quote based on your specific requirements</p>
-                    <Link href="/contact" className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-500 text-black rounded-xl font-bold text-lg hover:from-purple-400 hover:to-indigo-400 transition-all duration-300 shadow-2xl hover:shadow-purple-500/25 transform hover:-translate-y-1 border border-purple-400/50">
-                      Get Your Custom Quote
+                    <p className="text-gray-300 text-lg mb-6">Apply for partnership to access our systems</p>
+                    <Link href="/apply" className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-500 text-black rounded-xl font-bold text-lg hover:from-purple-400 hover:to-indigo-400 transition-all duration-300 shadow-2xl hover:shadow-purple-500/25 transform hover:-translate-y-1 border border-purple-400/50">
+                      Apply for Partnership
                     </Link>
                   </div>
                 </div>
@@ -466,13 +468,13 @@ export default function Home() {
         
         <div className="text-center mb-12 relative z-10">
           <h2 className="text-5xl md:text-6xl font-black text-white mb-6 tracking-tight">
-            Give Business Owners Their{' '}
+            Precision in{' '}
             <span className="bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent animate-pulse">
-              TIME BACK
+              Motion
             </span>
           </h2>
           <p className="text-2xl text-gray-300 max-w-4xl mx-auto tracking-wide">
-            Real results from businesses that put their operations on autopilot
+            Operational excellence from companies that demand continuous innovation
           </p>
         </div>
         <div className="relative overflow-hidden w-full">
@@ -512,10 +514,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-6xl md:text-7xl font-black text-white mb-8 tracking-tight">
-              Our <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Services</span>
+              Partnership <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Program</span>
             </h2>
             <p className="text-2xl text-gray-300 max-w-4xl mx-auto tracking-wide">
-              Executive-level automation services designed to transform your operations and drive growth
+              Reserved for businesses that demand continuous innovation
             </p>
           </div>
 
@@ -532,16 +534,16 @@ export default function Home() {
                     <div className="w-5 h-5 bg-black rounded-sm"></div>
                   </div>
                 </div>
-                  <h3 className="text-4xl md:text-5xl font-black text-white mb-3 tracking-wider">STARTER</h3>
+                  <h3 className="text-4xl md:text-5xl font-black text-white mb-3 tracking-wider">FOUNDATION</h3>
                 <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 mx-auto rounded-full mb-4 shadow-lg shadow-cyan-400/50"></div>
-                <p className="text-lg text-gray-300 font-medium tracking-wide">Essential automation for growing businesses</p>
+                <p className="text-lg text-gray-300 font-medium tracking-wide">Essential infrastructure for operational excellence</p>
               </div>
               
               <div className="flex-grow">
                   <div className="mb-6">
-                    <h4 className="text-xl font-bold text-cyan-300 mb-4">Perfect for:</h4>
+                    <h4 className="text-xl font-bold text-cyan-300 mb-4">Designed for:</h4>
                     <p className="text-gray-300 text-lg leading-relaxed mb-4">
-                      Small to medium businesses ready to automate their core processes and eliminate manual work.
+                      Companies establishing operational infrastructure for sustained excellence.
                     </p>
                   </div>
                   
@@ -550,31 +552,31 @@ export default function Home() {
                     <div className="w-7 h-7 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-cyan-400/25">
                       <span className="text-white text-sm font-bold">✓</span>
                     </div>
-                    <span className="font-medium tracking-wide">One system automation</span>
+                    <span className="font-medium tracking-wide">Core system engineering</span>
                   </li>
                   <li className="flex items-center space-x-4">
                     <div className="w-7 h-7 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-cyan-400/25">
                       <span className="text-white text-sm font-bold">✓</span>
                     </div>
-                    <span className="font-medium tracking-wide">Free automation audit</span>
+                    <span className="font-medium tracking-wide">Operational assessment</span>
                   </li>
                   <li className="flex items-center space-x-4">
                     <div className="w-7 h-7 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-cyan-400/25">
                       <span className="text-white text-sm font-bold">✓</span>
                     </div>
-                    <span className="font-medium tracking-wide">Weekly strategy calls</span>
+                    <span className="font-medium tracking-wide">Strategic oversight sessions</span>
                   </li>
                   <li className="flex items-center space-x-4">
                     <div className="w-7 h-7 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-cyan-400/25">
                       <span className="text-white text-sm font-bold">✓</span>
                     </div>
-                    <span className="font-medium tracking-wide">Basic reporting dashboard</span>
+                    <span className="font-medium tracking-wide">Performance intelligence dashboard</span>
                   </li>
                   <li className="flex items-center space-x-4">
                     <div className="w-7 h-7 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-cyan-400/25">
                       <span className="text-white text-sm font-bold">✓</span>
                     </div>
-                    <span className="font-medium tracking-wide">5 integration connections</span>
+                    <span className="font-medium tracking-wide">Essential system integrations</span>
                   </li>
               </ul>
               </div>
@@ -584,10 +586,10 @@ export default function Home() {
                   <div className="text-5xl font-black text-white mb-2 tracking-tight">
                     $1,500<span className="text-2xl font-normal text-cyan-300">/month</span>
                   </div>
-                  <p className="text-sm text-gray-400 font-medium tracking-wide">One system + audit + weekly call</p>
+                  <p className="text-sm text-gray-400 font-medium tracking-wide">Foundation infrastructure + assessment + oversight</p>
                 </div>
-                <Link href="/contact" className="block w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-xl font-bold text-center hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-1 border border-cyan-400/50">
-                  Book a Free Automation Audit
+                <Link href="/apply" className="block w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-xl font-bold text-center hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-1 border border-cyan-400/50">
+                  Apply for Partnership
                 </Link>
               </div>
             </div>
@@ -606,17 +608,17 @@ export default function Home() {
                   </div>
                 </div>
                   <h3 className="text-4xl md:text-5xl font-black text-white mb-3 tracking-wider">
-                  <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent">GROWTH</span>
+                  <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent">ADVANCED</span>
                   </h3>
                 <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 mx-auto rounded-full mb-4 shadow-lg shadow-cyan-400/50"></div>
-                <p className="text-lg text-gray-300 font-medium tracking-wide">Advanced automation for scaling businesses</p>
+                <p className="text-lg text-gray-300 font-medium tracking-wide">Comprehensive infrastructure for operational mastery</p>
               </div>
               
               <div className="flex-grow">
                   <div className="mb-6">
-                    <h4 className="text-xl font-bold text-blue-300 mb-4">Perfect for:</h4>
+                    <h4 className="text-xl font-bold text-blue-300 mb-4">Designed for:</h4>
                     <p className="text-gray-300 text-lg leading-relaxed mb-4">
-                      Growing companies that need comprehensive automation across multiple systems and departments.
+                      Companies requiring comprehensive operational infrastructure across all departments.
                     </p>
                   </div>
                   
@@ -625,37 +627,37 @@ export default function Home() {
                     <div className="w-7 h-7 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-400/25">
                       <span className="text-white text-sm font-bold">✓</span>
                     </div>
-                    <span className="font-medium tracking-wide">Everything in Starter</span>
+                    <span className="font-medium tracking-wide">Everything in Foundation</span>
                   </li>
                   <li className="flex items-center space-x-4">
                     <div className="w-7 h-7 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-400/25">
                       <span className="text-white text-sm font-bold">✓</span>
                     </div>
-                    <span className="font-medium tracking-wide">Multiple system automation</span>
+                    <span className="font-medium tracking-wide">Multi-system infrastructure engineering</span>
                   </li>
                   <li className="flex items-center space-x-4">
                     <div className="w-7 h-7 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-400/25">
                       <span className="text-white text-sm font-bold">✓</span>
                     </div>
-                    <span className="font-medium tracking-wide">Ongoing operations support</span>
+                    <span className="font-medium tracking-wide">Continuous operational excellence</span>
                   </li>
                   <li className="flex items-center space-x-4">
                     <div className="w-7 h-7 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-400/25">
                       <span className="text-white text-sm font-bold">✓</span>
                     </div>
-                    <span className="font-medium tracking-wide">Advanced analytics and reporting</span>
+                    <span className="font-medium tracking-wide">Advanced performance intelligence</span>
                   </li>
                   <li className="flex items-center space-x-4">
                     <div className="w-7 h-7 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-400/25">
                       <span className="text-white text-sm font-bold">✓</span>
                     </div>
-                    <span className="font-medium tracking-wide">15 integration connections</span>
+                    <span className="font-medium tracking-wide">Comprehensive system integrations</span>
                   </li>
                   <li className="flex items-center space-x-4">
                     <div className="w-7 h-7 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-400/25">
                       <span className="text-white text-sm font-bold">✓</span>
                     </div>
-                    <span className="font-medium tracking-wide">Priority support</span>
+                    <span className="font-medium tracking-wide">Priority operational support</span>
                   </li>
               </ul>
               </div>
@@ -665,10 +667,10 @@ export default function Home() {
                   <div className="text-5xl font-black text-white mb-2 tracking-tight">
                     $3,000<span className="text-2xl font-normal text-cyan-300">/month</span>
                   </div>
-                  <p className="text-sm text-gray-400 font-medium tracking-wide">Multiple systems + ongoing ops support</p>
+                  <p className="text-sm text-gray-400 font-medium tracking-wide">Multi-system infrastructure + continuous excellence</p>
                 </div>
-                <Link href="/contact" className="block w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-xl font-bold text-center hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-1 border border-cyan-400/50">
-                  Book a Free Automation Audit
+                <Link href="/apply" className="block w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-xl font-bold text-center hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-1 border border-cyan-400/50">
+                  Apply for Partnership
                 </Link>
               </div>
             </div>
@@ -687,17 +689,17 @@ export default function Home() {
                   </div>
                 </div>
                   <h3 className="text-4xl md:text-5xl font-black text-white mb-3 tracking-wider">
-                  <span className="bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-500 bg-clip-text text-transparent">PARTNER</span>
+                  <span className="bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-500 bg-clip-text text-transparent">ENTERPRISE</span>
                   </h3>
                 <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 mx-auto rounded-full mb-4 shadow-lg shadow-cyan-400/50"></div>
-                <p className="text-lg text-gray-300 font-medium tracking-wide">Complete business automation with enterprise features</p>
+                <p className="text-lg text-gray-300 font-medium tracking-wide">Complete operational infrastructure with enterprise capabilities</p>
               </div>
               
               <div className="flex-grow">
                   <div className="mb-6">
-                    <h4 className="text-xl font-bold text-purple-300 mb-4">Perfect for:</h4>
+                    <h4 className="text-xl font-bold text-purple-300 mb-4">Designed for:</h4>
                     <p className="text-gray-300 text-lg leading-relaxed mb-4">
-                      Enterprise-level companies that need complete operational transformation with dedicated support.
+                      Enterprise-level companies requiring complete operational infrastructure with dedicated excellence.
                     </p>
                   </div>
                   
@@ -706,37 +708,37 @@ export default function Home() {
                     <div className="w-7 h-7 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-400/25">
                       <span className="text-white text-sm font-bold">✓</span>
                     </div>
-                    <span className="font-medium tracking-wide">Everything in Growth</span>
+                    <span className="font-medium tracking-wide">Everything in Advanced</span>
                   </li>
                   <li className="flex items-center space-x-4">
                     <div className="w-7 h-7 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-400/25">
                       <span className="text-white text-sm font-bold">✓</span>
                     </div>
-                    <span className="font-medium tracking-wide">Deep system integration</span>
+                    <span className="font-medium tracking-wide">Deep infrastructure integration</span>
                   </li>
                   <li className="flex items-center space-x-4">
                     <div className="w-7 h-7 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-400/25">
                       <span className="text-white text-sm font-bold">✓</span>
                     </div>
-                    <span className="font-medium tracking-wide">Weekly operations management</span>
+                    <span className="font-medium tracking-wide">Weekly operational excellence management</span>
                   </li>
                   <li className="flex items-center space-x-4">
                     <div className="w-7 h-7 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-400/25">
                       <span className="text-white text-sm font-bold">✓</span>
                     </div>
-                    <span className="font-medium tracking-wide">Custom AI model training</span>
+                    <span className="font-medium tracking-wide">Custom intelligence architecture development</span>
                   </li>
                   <li className="flex items-center space-x-4">
                     <div className="w-7 h-7 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-400/25">
                       <span className="text-white text-sm font-bold">✓</span>
                     </div>
-                    <span className="font-medium tracking-wide">Unlimited integrations</span>
+                    <span className="font-medium tracking-wide">Unlimited infrastructure integrations</span>
                   </li>
                   <li className="flex items-center space-x-4">
                     <div className="w-7 h-7 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-400/25">
                       <span className="text-white text-sm font-bold">✓</span>
                     </div>
-                    <span className="font-medium tracking-wide">Dedicated success manager</span>
+                    <span className="font-medium tracking-wide">Dedicated operational excellence manager</span>
                   </li>
               </ul>
               </div>
@@ -746,10 +748,10 @@ export default function Home() {
                   <div className="text-5xl font-black text-white mb-2 tracking-tight">
                     $5,000<span className="text-2xl font-normal text-cyan-300">/month</span>
                   </div>
-                  <p className="text-sm text-gray-400 font-medium tracking-wide">Deep integration + run ops weekly</p>
+                  <p className="text-sm text-gray-400 font-medium tracking-wide">Deep infrastructure + weekly excellence management</p>
                 </div>
-                <Link href="/contact" className="block w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-xl font-bold text-center hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-1 border border-cyan-400/50">
-                  Book a Free Automation Audit
+                <Link href="/apply" className="block w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-xl font-bold text-center hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-1 border border-cyan-400/50">
+                  Apply for Partnership
                 </Link>
                 </div>
               </div>
@@ -766,7 +768,7 @@ export default function Home() {
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
         
-        <p className="text-cyan-300 text-center mb-8 text-lg font-medium tracking-wider relative z-10">Trusted by leading companies and powered by industry-leading tools</p>
+        <p className="text-cyan-300 text-center mb-8 text-lg font-medium tracking-wider relative z-10">Reserved for qualified companies and powered by precision infrastructure</p>
         <div className="relative overflow-hidden">
           <div className="flex gap-20 animate-scroll">
             {/* First set of partners */}

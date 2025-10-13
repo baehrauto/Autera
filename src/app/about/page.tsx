@@ -2,20 +2,20 @@ import Navbar from '@/components/Navbar'
 
 const values = [
   {
-    title: 'Innovation',
-    description: 'We constantly push the boundaries of what\'s possible with AI automation.'
-  },
-  {
-    title: 'Reliability',
-    description: 'Our systems are built to be robust, secure, and dependable.'
-  },
-  {
-    title: 'Partnership',
-    description: 'We work closely with our clients to understand their unique needs.'
+    title: 'Precision',
+    description: 'Every system we engineer operates with exacting precision and reliability.'
   },
   {
     title: 'Excellence',
-    description: 'We strive for excellence in every aspect of our service delivery.'
+    description: 'We maintain the highest standards in every aspect of our infrastructure design.'
+  },
+  {
+    title: 'Discipline',
+    description: 'We work only with companies that demand continuous operational excellence.'
+  },
+  {
+    title: 'Silence',
+    description: 'Our systems operate invisibly, efficiently, without disruption to your operations.'
   }
 ]
 
@@ -38,7 +38,7 @@ export default function About() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 rounded-full shadow-lg shadow-cyan-400/50"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-7xl md:text-8xl font-black text-white mb-8 tracking-tight">About Autera</h1>
-          <p className="text-3xl md:text-4xl text-gray-300 max-w-4xl mx-auto mb-6 font-light tracking-wide">Transforming businesses through intelligent automation</p>
+          <p className="text-3xl md:text-4xl text-gray-300 max-w-4xl mx-auto mb-6 font-light tracking-wide">The silent infrastructure behind great companies</p>
         </div>
       </section>
 
@@ -53,26 +53,27 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
               <h2 className="text-5xl md:text-6xl font-black text-white mb-10 tracking-tight">
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">Our Story</span>
+                <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">Our Standard</span>
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed tracking-wide">
-                Autera was founded with a simple mission: to help businesses harness the power of AI to automate their operations and achieve sustainable growth.
+                Autera was built for operators, not dreamers. We design systems that make companies run flawlessly.
               </p>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed tracking-wide">
-                We recognized that many small to mid-sized businesses were struggling with manual processes, inefficient workflows, and the challenges of scaling their operations. Our team of AI experts and business automation specialists came together to create solutions that would transform these challenges into opportunities.
+                We engineer automation infrastructure for high-performance teams that demand precision. 
+                Our systems operate silently, efficiently, always on.
               </p>
               <p className="text-xl text-gray-300 leading-relaxed tracking-wide">
-                Today, we're proud to be at the forefront of AI automation, helping businesses across various industries streamline their operations, reduce costs, and focus on what matters most - growth and innovation.
+                We choose who we work with. Our systems are designed for companies that operate at a higher standard.
               </p>
             </div>
             <div className="bg-gradient-to-br from-gray-900/90 to-black/90 p-12 rounded-3xl shadow-2xl border border-cyan-400/30 backdrop-blur-sm">
               <h3 className="text-3xl font-black text-cyan-300 mb-8 tracking-wider">Our Mission</h3>
               <p className="text-lg text-gray-300 mb-10 leading-relaxed tracking-wide">
-                To empower businesses with intelligent automation solutions that drive efficiency, reduce costs, and enable sustainable growth.
+                To engineer automation infrastructure that operates with precision, silence, and excellence.
               </p>
               <h3 className="text-3xl font-black text-cyan-300 mb-8 tracking-wider">Our Vision</h3>
               <p className="text-lg text-gray-300 leading-relaxed tracking-wide">
-                To be the leading provider of AI automation solutions, transforming how businesses operate in the digital age.
+                To be the silent infrastructure behind every great company that demands operational excellence.
               </p>
             </div>
           </div>
@@ -88,7 +89,7 @@ export default function About() {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h2 className="text-5xl md:text-6xl font-black text-white text-center mb-16 tracking-tight">
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">Our Values</span>
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">Our Principles</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             {values.map((value, index) => (
@@ -113,25 +114,25 @@ export default function About() {
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">Our Expertise</span>
           </h2>
           <p className="text-2xl text-center text-gray-300 mb-16 tracking-wide">
-            Our team combines deep technical expertise with business acumen to deliver exceptional results
+            We engineer automation infrastructure for companies that demand operational excellence
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div className="bg-gradient-to-br from-gray-900/90 to-black/90 p-10 rounded-3xl shadow-2xl border border-cyan-400/30 backdrop-blur-sm hover:border-cyan-400/60 transition-all duration-500">
-              <h3 className="text-2xl font-black text-cyan-300 mb-6 tracking-wider">AI & Machine Learning</h3>
+              <h3 className="text-2xl font-black text-cyan-300 mb-6 tracking-wider">Intelligence Architecture</h3>
               <p className="text-gray-300 text-lg leading-relaxed tracking-wide">
-                Advanced AI algorithms and machine learning models power our automation solutions.
+                Custom intelligence systems engineered for precision and operational excellence.
               </p>
             </div>
             <div className="bg-gradient-to-br from-gray-900/90 to-black/90 p-10 rounded-3xl shadow-2xl border border-cyan-400/30 backdrop-blur-sm hover:border-cyan-400/60 transition-all duration-500">
-              <h3 className="text-2xl font-black text-cyan-300 mb-6 tracking-wider">Business Process Automation</h3>
+              <h3 className="text-2xl font-black text-cyan-300 mb-6 tracking-wider">Operational Infrastructure</h3>
               <p className="text-gray-300 text-lg leading-relaxed tracking-wide">
-                Deep understanding of business workflows and optimization strategies.
+                Complete operational systems designed for companies that demand excellence.
               </p>
             </div>
             <div className="bg-gradient-to-br from-gray-900/90 to-black/90 p-10 rounded-3xl shadow-2xl border border-cyan-400/30 backdrop-blur-sm hover:border-cyan-400/60 transition-all duration-500">
-              <h3 className="text-2xl font-black text-cyan-300 mb-6 tracking-wider">Integration Expertise</h3>
+              <h3 className="text-2xl font-black text-cyan-300 mb-6 tracking-wider">System Integration</h3>
               <p className="text-gray-300 text-lg leading-relaxed tracking-wide">
-                Seamless integration with existing systems and tools for maximum efficiency.
+                Seamless integration with your existing infrastructure for maximum operational efficiency.
               </p>
             </div>
           </div>

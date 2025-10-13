@@ -59,7 +59,7 @@ export default function Portfolio() {
           </h1>
           
           <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-300 max-w-5xl mx-auto mb-8 sm:mb-12 font-light leading-relaxed tracking-wide px-4">
-            Real results from businesses that put their operations on autopilot
+            Operational excellence from companies that demand precision
           </p>
         </div>
       </section>
@@ -77,7 +77,7 @@ export default function Portfolio() {
               Our <span className="bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">Work</span>
             </h2>
             <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto tracking-wide px-4">
-              Explore our web development portfolio
+              Explore our operational infrastructure portfolio
             </p>
           </div>
 
@@ -103,7 +103,7 @@ export default function Portfolio() {
                   </div>
                   
                   <p className="text-base sm:text-lg lg:text-xl text-gray-300 mb-6 sm:mb-8 leading-relaxed">
-                    {section.description}
+                    Operational gateways that convert attention directly into workflow. Every interaction engineered to drive business forward with precision.
                   </p>
                   
                   <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
@@ -166,24 +166,24 @@ export default function Portfolio() {
           <div className="text-center">
             <div className="bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl border border-cyan-400/30 p-6 sm:p-8 lg:p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-4 sm:mb-6 tracking-tight">
-                Ready to See Your Business on <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">AUTOPILOT</span>?
+                Ready to Establish Operational <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">EXCELLENCE</span>?
               </h2>
               <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed mb-6 sm:mb-8">
-                Let's discuss how we can transform your operations and showcase your success story in our portfolio.
+                Let's discuss how we can engineer your operational infrastructure and showcase your success in our portfolio.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8">
                 <Link 
-                  href="/contact"
+                  href="/apply"
                   className="group relative px-6 sm:px-8 lg:px-10 py-4 sm:py-5 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-2xl font-bold text-base sm:text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-2 border border-cyan-400/50 w-full sm:w-auto text-center justify-center"
                 >
-                  <span className="relative z-10 tracking-wider">Book a Free Automation Audit</span>
+                  <span className="relative z-10 tracking-wider">Apply for Partnership</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </Link>
                 <Link 
                   href="/solutions"
                   className="px-6 sm:px-8 lg:px-10 py-4 sm:py-5 bg-transparent text-cyan-300 rounded-2xl font-bold text-base sm:text-lg border-2 border-cyan-400/50 hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300 transform hover:-translate-y-2 backdrop-blur-sm w-full sm:w-auto text-center justify-center"
                 >
-                  Learn More About Our Services
+                  Learn More About Our Systems
                 </Link>
               </div>
             </div>
