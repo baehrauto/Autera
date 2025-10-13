@@ -101,7 +101,7 @@ export default function Contact() {
           
           <div className="bg-gradient-to-br from-gray-900/90 to-black/90 rounded-3xl shadow-2xl border border-cyan-400/30 backdrop-blur-sm p-8">
             {/* Calendly inline widget begin */}
-            <div className="calendly-inline-widget" data-url="https://calendly.com/greg-autera" style={{minWidth: '320px', height: '700px'}}></div>
+            <div className="calendly-inline-widget" data-url="https://calendly.com/private-diagnostic-session/30min" style={{minWidth: '320px', height: '700px'}}></div>
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             {/* Calendly inline widget end */}
           </div>
