@@ -22,26 +22,34 @@ export default function Partnerships() {
           
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 rounded-full shadow-lg shadow-cyan-400/50"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <h1 className="text-7xl md:text-8xl font-black text-white mb-8 tracking-tight">Automation Services</h1>
+            <h1 className="text-7xl md:text-8xl font-black text-white mb-8 tracking-tight">Partnership Program</h1>
             <p className="text-3xl md:text-4xl text-gray-300 max-w-5xl mx-auto font-light tracking-wide">
-              Executive-level automation services designed to transform your operations and drive growth.
+              Reserved for businesses that demand continuous innovation
             </p>
           </div>
         </section>
 
         {/* Service Tiers */}
-        <section className="py-24 bg-gradient-to-b from-black via-gray-900 to-black flex justify-center items-center relative overflow-hidden">
-          {/* Futuristic Background */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.1)_0%,transparent_70%)]"></div>
+        <section className="py-32 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.05)_0%,transparent_70%)]"></div>
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
           <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
           
-          <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch relative z-10">
-            {/* Starter Card */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-20">
+              <h2 className="text-6xl md:text-7xl font-black text-white mb-8 tracking-tight">
+                Partnership <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Program</span>
+              </h2>
+              <p className="text-2xl text-gray-300 max-w-4xl mx-auto tracking-wide">
+                Reserved for businesses that demand continuous innovation
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Foundation Service */}
             <div className="group relative bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl border border-cyan-400/30 shadow-2xl hover:shadow-cyan-500/25 hover:border-cyan-400/60 transition-all duration-500 p-8 flex flex-col min-h-[700px] overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute top-0 right-0 w-40 h-40 bg-cyan-400/20 rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(6,182,212,0.05)_50%,transparent_75%)] bg-[size:20px_20px]"></div>
               
               <div className="relative z-10 flex flex-col flex-grow">
                 <div className="text-center mb-8">
@@ -50,44 +58,51 @@ export default function Partnerships() {
                       <div className="w-5 h-5 bg-black rounded-sm"></div>
                     </div>
                   </div>
-                  <h2 className="text-4xl md:text-5xl font-black text-white mb-3 tracking-wider">STARTER</h2>
+                    <h3 className="text-4xl md:text-5xl font-black text-white mb-3 tracking-wider">FOUNDATION</h3>
                   <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 mx-auto rounded-full mb-4 shadow-lg shadow-cyan-400/50"></div>
-                  <p className="text-lg text-gray-300 font-medium tracking-wide">Essential automation for growing businesses</p>
+                  <p className="text-lg text-gray-300 font-medium tracking-wide">Essential infrastructure for operational excellence</p>
                 </div>
                 
                 <div className="flex-grow">
+                    <div className="mb-6">
+                      <h4 className="text-xl font-bold text-cyan-300 mb-4">Designed for:</h4>
+                      <p className="text-gray-300 text-lg leading-relaxed mb-4">
+                        Companies establishing operational infrastructure for sustained excellence.
+                      </p>
+                    </div>
+                    
                   <ul className="space-y-5 text-base text-gray-300">
                     <li className="flex items-center space-x-4">
                       <div className="w-7 h-7 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-cyan-400/25">
-                        <span className="text-black text-sm font-bold">✓</span>
+                        <span className="text-white text-sm font-bold">✓</span>
                       </div>
-                      <span className="font-medium tracking-wide">One system automation</span>
+                      <span className="font-medium tracking-wide">Core system engineering</span>
                     </li>
                     <li className="flex items-center space-x-4">
                       <div className="w-7 h-7 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-cyan-400/25">
-                        <span className="text-black text-sm font-bold">✓</span>
+                        <span className="text-white text-sm font-bold">✓</span>
                       </div>
-                      <span className="font-medium tracking-wide">Free automation audit</span>
+                      <span className="font-medium tracking-wide">Operational assessment</span>
                     </li>
                     <li className="flex items-center space-x-4">
                       <div className="w-7 h-7 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-cyan-400/25">
-                        <span className="text-black text-sm font-bold">✓</span>
+                        <span className="text-white text-sm font-bold">✓</span>
                       </div>
-                      <span className="font-medium tracking-wide">Weekly strategy calls</span>
+                      <span className="font-medium tracking-wide">Strategic oversight sessions</span>
                     </li>
                     <li className="flex items-center space-x-4">
                       <div className="w-7 h-7 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-cyan-400/25">
-                        <span className="text-black text-sm font-bold">✓</span>
+                        <span className="text-white text-sm font-bold">✓</span>
                       </div>
-                      <span className="font-medium tracking-wide">Basic reporting dashboard</span>
+                      <span className="font-medium tracking-wide">Performance intelligence dashboard</span>
                     </li>
                     <li className="flex items-center space-x-4">
                       <div className="w-7 h-7 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-cyan-400/25">
-                        <span className="text-black text-sm font-bold">✓</span>
+                        <span className="text-white text-sm font-bold">✓</span>
                       </div>
-                      <span className="font-medium tracking-wide">5 integration connections</span>
+                      <span className="font-medium tracking-wide">Essential system integrations</span>
                     </li>
-              </ul>
+                </ul>
                 </div>
                 
                 <div className="mt-8 pt-6 border-t border-cyan-400/30">
@@ -95,95 +110,19 @@ export default function Partnerships() {
                     <div className="text-5xl font-black text-white mb-2 tracking-tight">
                       $1,500<span className="text-2xl font-normal text-cyan-300">/month</span>
                     </div>
-                    <p className="text-sm text-gray-400 font-medium tracking-wide">One system + audit + weekly call</p>
+                    <p className="text-sm text-gray-400 font-medium tracking-wide">Foundation infrastructure + assessment + oversight</p>
                   </div>
-                  <Link href="/contact" className="block w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-xl font-bold text-center hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-1 border border-cyan-400/50">
-                    Book a Free Automation Audit
+                  <Link href="/apply" className="block w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-xl font-bold text-center hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-1 border border-cyan-400/50">
+                    Apply for Partnership
                   </Link>
                 </div>
               </div>
             </div>
 
-            {/* Growth Card */}
+              {/* Advanced Service */}
             <div className="group relative bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl border border-cyan-400/30 shadow-2xl hover:shadow-cyan-500/25 hover:border-cyan-400/60 transition-all duration-500 p-8 flex flex-col min-h-[700px] overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute top-0 right-0 w-40 h-40 bg-cyan-400/20 rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(6,182,212,0.05)_50%,transparent_75%)] bg-[size:20px_20px]"></div>
-              
-              <div className="relative z-10 flex flex-col flex-grow">
-                <div className="text-center mb-8">
-                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl mb-6 border border-cyan-400/30">
-                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-lg flex items-center justify-center shadow-lg shadow-cyan-400/25">
-                      <div className="w-5 h-5 bg-black rounded-sm transform rotate-45"></div>
-                    </div>
-                  </div>
-                  <h2 className="text-4xl md:text-5xl font-black text-white mb-3 tracking-wider">
-                    <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">GROWTH</span>
-                  </h2>
-                  <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 mx-auto rounded-full mb-4 shadow-lg shadow-cyan-400/50"></div>
-                  <p className="text-lg text-gray-300 font-medium tracking-wide">Advanced automation for scaling businesses</p>
-                </div>
-                
-                <div className="flex-grow">
-                  <ul className="space-y-5 text-base text-gray-300">
-                    <li className="flex items-center space-x-4">
-                      <div className="w-7 h-7 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-400/25">
-                        <span className="text-black text-sm font-bold">✓</span>
-                      </div>
-                      <span className="font-medium tracking-wide">Everything in Starter</span>
-                    </li>
-                    <li className="flex items-center space-x-4">
-                      <div className="w-7 h-7 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-400/25">
-                        <span className="text-black text-sm font-bold">✓</span>
-                      </div>
-                      <span className="font-medium tracking-wide">Multiple system automation</span>
-                    </li>
-                    <li className="flex items-center space-x-4">
-                      <div className="w-7 h-7 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-400/25">
-                        <span className="text-black text-sm font-bold">✓</span>
-                      </div>
-                      <span className="font-medium tracking-wide">Ongoing operations support</span>
-                    </li>
-                    <li className="flex items-center space-x-4">
-                      <div className="w-7 h-7 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-400/25">
-                        <span className="text-black text-sm font-bold">✓</span>
-                      </div>
-                      <span className="font-medium tracking-wide">Advanced analytics and reporting</span>
-                    </li>
-                    <li className="flex items-center space-x-4">
-                      <div className="w-7 h-7 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-400/25">
-                        <span className="text-black text-sm font-bold">✓</span>
-                      </div>
-                      <span className="font-medium tracking-wide">15 integration connections</span>
-                    </li>
-                    <li className="flex items-center space-x-4">
-                      <div className="w-7 h-7 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-400/25">
-                        <span className="text-black text-sm font-bold">✓</span>
-                      </div>
-                      <span className="font-medium tracking-wide">Priority support</span>
-                    </li>
-              </ul>
-                </div>
-                
-                <div className="mt-8 pt-6 border-t border-cyan-400/30">
-                  <div className="text-center mb-6">
-                    <div className="text-5xl font-black text-white mb-2 tracking-tight">
-                      $3,000<span className="text-2xl font-normal text-cyan-300">/month</span>
-                    </div>
-                    <p className="text-sm text-gray-400 font-medium tracking-wide">Multiple systems + ongoing ops support</p>
-                  </div>
-                  <Link href="/contact" className="block w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-xl font-bold text-center hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-1 border border-cyan-400/50">
-                    Book a Free Automation Audit
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            {/* Partner Card */}
-            <div className="group relative bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl border border-cyan-400/30 shadow-2xl hover:shadow-cyan-500/25 hover:border-cyan-400/60 transition-all duration-500 p-8 flex flex-col min-h-[700px] overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute top-0 right-0 w-40 h-40 bg-cyan-400/20 rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(6,182,212,0.05)_50%,transparent_75%)] bg-[size:20px_20px]"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute top-0 right-0 w-40 h-40 bg-cyan-400/10 rounded-full blur-3xl animate-pulse"></div>
               
               <div className="relative z-10 flex flex-col flex-grow">
                 <div className="text-center mb-8">
@@ -192,52 +131,140 @@ export default function Partnerships() {
                       <div className="w-5 h-5 bg-black rounded-sm"></div>
                     </div>
                   </div>
-                  <h2 className="text-4xl md:text-5xl font-black text-white mb-3 tracking-wider">
-                    <span className="bg-gradient-to-r from-purple-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent">PARTNER</span>
-                  </h2>
+                    <h3 className="text-4xl md:text-5xl font-black text-white mb-3 tracking-wider">
+                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent">ADVANCED</span>
+                    </h3>
                   <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 mx-auto rounded-full mb-4 shadow-lg shadow-cyan-400/50"></div>
-                  <p className="text-lg text-gray-300 font-medium tracking-wide">Complete business automation with enterprise features</p>
+                  <p className="text-lg text-gray-300 font-medium tracking-wide">Comprehensive infrastructure for operational mastery</p>
                 </div>
                 
                 <div className="flex-grow">
+                    <div className="mb-6">
+                      <h4 className="text-xl font-bold text-blue-300 mb-4">Designed for:</h4>
+                      <p className="text-gray-300 text-lg leading-relaxed mb-4">
+                        Companies requiring comprehensive operational infrastructure across all departments.
+                      </p>
+                    </div>
+                    
+                  <ul className="space-y-5 text-base text-gray-300">
+                    <li className="flex items-center space-x-4">
+                      <div className="w-7 h-7 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-400/25">
+                        <span className="text-white text-sm font-bold">✓</span>
+                      </div>
+                      <span className="font-medium tracking-wide">Everything in Foundation</span>
+                    </li>
+                    <li className="flex items-center space-x-4">
+                      <div className="w-7 h-7 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-400/25">
+                        <span className="text-white text-sm font-bold">✓</span>
+                      </div>
+                      <span className="font-medium tracking-wide">Multi-system infrastructure engineering</span>
+                    </li>
+                    <li className="flex items-center space-x-4">
+                      <div className="w-7 h-7 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-400/25">
+                        <span className="text-white text-sm font-bold">✓</span>
+                      </div>
+                      <span className="font-medium tracking-wide">Continuous operational excellence</span>
+                    </li>
+                    <li className="flex items-center space-x-4">
+                      <div className="w-7 h-7 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-400/25">
+                        <span className="text-white text-sm font-bold">✓</span>
+                      </div>
+                      <span className="font-medium tracking-wide">Advanced performance intelligence</span>
+                    </li>
+                    <li className="flex items-center space-x-4">
+                      <div className="w-7 h-7 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-400/25">
+                        <span className="text-white text-sm font-bold">✓</span>
+                      </div>
+                      <span className="font-medium tracking-wide">Comprehensive system integrations</span>
+                    </li>
+                    <li className="flex items-center space-x-4">
+                      <div className="w-7 h-7 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-400/25">
+                        <span className="text-white text-sm font-bold">✓</span>
+                      </div>
+                      <span className="font-medium tracking-wide">Priority operational support</span>
+                    </li>
+                </ul>
+                </div>
+                
+                <div className="mt-8 pt-6 border-t border-cyan-400/30">
+                  <div className="text-center mb-6">
+                    <div className="text-5xl font-black text-white mb-2 tracking-tight">
+                      $3,000<span className="text-2xl font-normal text-cyan-300">/month</span>
+                    </div>
+                    <p className="text-sm text-gray-400 font-medium tracking-wide">Multi-system infrastructure + continuous excellence</p>
+                  </div>
+                  <Link href="/apply" className="block w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-xl font-bold text-center hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-1 border border-cyan-400/50">
+                    Apply for Partnership
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+              {/* Enterprise Service */}
+            <div className="group relative bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl border border-cyan-400/30 shadow-2xl hover:shadow-cyan-500/25 hover:border-cyan-400/60 transition-all duration-500 p-8 flex flex-col min-h-[700px] overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute top-0 right-0 w-40 h-40 bg-cyan-400/10 rounded-full blur-3xl animate-pulse"></div>
+              
+              <div className="relative z-10 flex flex-col flex-grow">
+                <div className="text-center mb-8">
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl mb-6 border border-cyan-400/30">
+                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-lg flex items-center justify-center shadow-lg shadow-cyan-400/25">
+                      <div className="w-5 h-5 bg-black rounded-sm"></div>
+                    </div>
+                  </div>
+                    <h3 className="text-4xl md:text-5xl font-black text-white mb-3 tracking-wider">
+                    <span className="bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-500 bg-clip-text text-transparent">ENTERPRISE</span>
+                    </h3>
+                  <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 mx-auto rounded-full mb-4 shadow-lg shadow-cyan-400/50"></div>
+                  <p className="text-lg text-gray-300 font-medium tracking-wide">Complete operational infrastructure with enterprise capabilities</p>
+                </div>
+                
+                <div className="flex-grow">
+                    <div className="mb-6">
+                      <h4 className="text-xl font-bold text-purple-300 mb-4">Designed for:</h4>
+                      <p className="text-gray-300 text-lg leading-relaxed mb-4">
+                        Enterprise-level companies requiring complete operational infrastructure with dedicated excellence.
+                      </p>
+                    </div>
+                    
                   <ul className="space-y-5 text-base text-gray-300">
                     <li className="flex items-center space-x-4">
                       <div className="w-7 h-7 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-400/25">
-                        <span className="text-black text-sm font-bold">✓</span>
+                        <span className="text-white text-sm font-bold">✓</span>
                       </div>
-                      <span className="font-medium tracking-wide">Everything in Growth</span>
+                      <span className="font-medium tracking-wide">Everything in Advanced</span>
                     </li>
                     <li className="flex items-center space-x-4">
                       <div className="w-7 h-7 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-400/25">
-                        <span className="text-black text-sm font-bold">✓</span>
+                        <span className="text-white text-sm font-bold">✓</span>
                       </div>
-                      <span className="font-medium tracking-wide">Deep system integration</span>
+                      <span className="font-medium tracking-wide">Deep infrastructure integration</span>
                     </li>
                     <li className="flex items-center space-x-4">
                       <div className="w-7 h-7 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-400/25">
-                        <span className="text-black text-sm font-bold">✓</span>
+                        <span className="text-white text-sm font-bold">✓</span>
                       </div>
-                      <span className="font-medium tracking-wide">Weekly operations management</span>
+                      <span className="font-medium tracking-wide">Weekly operational excellence management</span>
                     </li>
                     <li className="flex items-center space-x-4">
                       <div className="w-7 h-7 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-400/25">
-                        <span className="text-black text-sm font-bold">✓</span>
+                        <span className="text-white text-sm font-bold">✓</span>
                       </div>
-                      <span className="font-medium tracking-wide">Custom AI model training</span>
+                      <span className="font-medium tracking-wide">Custom intelligence architecture development</span>
                     </li>
                     <li className="flex items-center space-x-4">
                       <div className="w-7 h-7 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-400/25">
-                        <span className="text-black text-sm font-bold">✓</span>
+                        <span className="text-white text-sm font-bold">✓</span>
                       </div>
-                      <span className="font-medium tracking-wide">Unlimited integrations</span>
+                      <span className="font-medium tracking-wide">Unlimited infrastructure integrations</span>
                     </li>
                     <li className="flex items-center space-x-4">
                       <div className="w-7 h-7 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-400/25">
-                        <span className="text-black text-sm font-bold">✓</span>
+                        <span className="text-white text-sm font-bold">✓</span>
                       </div>
-                      <span className="font-medium tracking-wide">Dedicated success manager</span>
+                      <span className="font-medium tracking-wide">Dedicated operational excellence manager</span>
                     </li>
-              </ul>
+                </ul>
                 </div>
                 
                 <div className="mt-8 pt-6 border-t border-cyan-400/30">
@@ -245,16 +272,17 @@ export default function Partnerships() {
                     <div className="text-5xl font-black text-white mb-2 tracking-tight">
                       $5,000<span className="text-2xl font-normal text-cyan-300">/month</span>
                     </div>
-                    <p className="text-sm text-gray-400 font-medium tracking-wide">Deep integration + run ops weekly</p>
+                    <p className="text-sm text-gray-400 font-medium tracking-wide">Deep infrastructure + weekly excellence management</p>
                   </div>
-                  <Link href="/contact" className="block w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-xl font-bold text-center hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-1 border border-cyan-400/50">
-                    Book a Free Automation Audit
+                  <Link href="/apply" className="block w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-xl font-bold text-center hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-1 border border-cyan-400/50">
+                    Apply for Partnership
                   </Link>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* CTA */}
         <section className="bg-gradient-to-br from-black via-gray-900 to-black py-24 relative overflow-hidden">
@@ -264,12 +292,12 @@ export default function Partnerships() {
           <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <h2 className="text-5xl md:text-6xl font-black text-white mb-8 tracking-tight">Ready to Put Your Operations on Autopilot?</h2>
+            <h2 className="text-5xl md:text-6xl font-black text-white mb-8 tracking-tight">Built for Discipline</h2>
             <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto tracking-wide">
-              Start with a free automation audit and see exactly where revenue is slipping through the cracks.
+              We engineer systems for companies that demand excellence. Your operational superiority becomes our standard.
             </p>
-            <Link href="/contact" className="inline-block px-16 py-8 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-3xl font-black text-2xl shadow-2xl hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-cyan-500/25 border border-cyan-400/50 tracking-wider">
-              Book a Free Automation Audit
+            <Link href="/apply" className="inline-block px-16 py-8 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-3xl font-black text-2xl shadow-2xl hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-cyan-500/25 border border-cyan-400/50 tracking-wider">
+              Apply for Partnership
             </Link>
           </div>
         </section>
