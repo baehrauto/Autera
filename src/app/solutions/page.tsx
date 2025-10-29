@@ -217,14 +217,14 @@ export default function Solutions() {
               {processSteps.map((step, index) => (
                 <div key={index} className="group relative">
                   <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6 lg:space-x-8">
-                    <div className="flex-shrink-0 mx-auto sm:mx-0">
-                      <div className={`w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-r ${step.color} rounded-2xl flex items-center justify-center text-2xl sm:text-3xl lg:text-4xl shadow-2xl shadow-cyan-400/25 group-hover:scale-110 transition-transform duration-300`}>
-                        {step.icon}
-                      </div>
-                    </div>
                     <div className="flex-1 text-center sm:text-left">
                       <div className="flex flex-col sm:flex-row items-center sm:items-start mb-4">
-                        <span className="text-4xl sm:text-5xl lg:text-6xl font-black text-cyan-400/30 mb-2 sm:mb-0 sm:mr-4">{step.number}</span>
+                        <div className="relative mb-4 sm:mb-0 sm:mr-8">
+                          <span className="text-6xl sm:text-7xl lg:text-8xl font-black bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-2xl">
+                            {step.number}
+                          </span>
+                          <div className="absolute -inset-2 bg-gradient-to-r from-cyan-400/20 via-blue-400/20 to-purple-400/20 rounded-full blur-xl"></div>
+                        </div>
                         <div>
                           <h3 className="text-xl sm:text-2xl lg:text-3xl font-black text-white mb-2 tracking-tight">{step.title}</h3>
                           <p className="text-sm sm:text-base lg:text-lg text-cyan-300 font-bold tracking-wider">{step.subtitle}</p>

@@ -1,143 +1,396 @@
-import Navbar from '@/components/Navbar'
+'use client';
 
-const values = [
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import Link from 'next/link';
+
+const processSteps = [
   {
-    title: 'Precision',
-    description: 'Every system we engineer operates with exacting precision and reliability.'
+    number: '01',
+    title: 'Discovery & Audit',
+    subtitle: 'Deep Business Analysis',
+    description: 'We dive deep into your current operations to identify every inefficiency and missed opportunity.',
+    features: [
+      'Complete workflow mapping across all departments',
+      'Revenue leak identification and quantification',
+      'KPI baseline establishment and benchmarking',
+      'Custom automation roadmap creation'
+    ],
+    icon: '🔍',
+    color: 'from-cyan-400 to-blue-400'
   },
   {
-    title: 'Excellence',
-    description: 'We maintain the highest standards in every aspect of our infrastructure design.'
+    number: '02',
+    title: 'System Architecture',
+    subtitle: 'Intelligent Design',
+    description: 'We architect a complete automation ecosystem tailored to your specific business needs.',
+    features: [
+      'Multi-platform integration strategy',
+      'Custom workflow design and optimization',
+      'Data flow architecture and security protocols',
+      'Scalable infrastructure planning'
+    ],
+    icon: '⚙️',
+    color: 'from-blue-400 to-purple-400'
   },
   {
-    title: 'Discipline',
-    description: 'We work only with companies that demand continuous operational excellence.'
+    number: '03',
+    title: 'Implementation',
+    subtitle: 'Seamless Deployment',
+    description: 'We build, test, and deploy your automation systems with zero disruption to your operations.',
+    features: [
+      'Phased rollout with minimal business impact',
+      'Comprehensive testing and quality assurance',
+      'Team training and change management',
+      'Real-time monitoring and optimization'
+    ],
+    icon: '🚀',
+    color: 'from-purple-400 to-pink-400'
   },
   {
-    title: 'Silence',
-    description: 'Our systems operate invisibly, efficiently, without disruption to your operations.'
+    number: '04',
+    title: 'Optimization',
+    subtitle: 'Continuous Excellence',
+    description: 'We continuously monitor, refine, and enhance your systems to maximize performance and ROI.',
+    features: [
+      'Performance analytics and reporting',
+      'Proactive issue detection and resolution',
+      'Continuous improvement recommendations',
+      'Strategic scaling and expansion support'
+    ],
+    icon: '📈',
+    color: 'from-pink-400 to-cyan-400'
   }
-]
+];
+
+const capabilities = [
+  {
+    title: 'Workflow Automation',
+    description: 'Eliminate manual processes with intelligent automation',
+    features: [
+      'Lead qualification and routing',
+      'Invoice generation and payment tracking',
+      'Customer onboarding sequences',
+      'Renewal and retention campaigns'
+    ],
+    icon: '🔄',
+    gradient: 'from-cyan-500/20 to-blue-500/20'
+  },
+  {
+    title: 'Data Integration',
+    description: 'Connect all your tools and systems seamlessly',
+    features: [
+      '50+ platform integrations',
+      'Real-time data synchronization',
+      'Custom API development',
+      'Legacy system modernization'
+    ],
+    icon: '🔗',
+    gradient: 'from-blue-500/20 to-purple-500/20'
+  },
+  {
+    title: 'Intelligent Analytics',
+    description: 'Make data-driven decisions with powerful insights',
+    features: [
+      'Executive dashboards',
+      'Predictive analytics',
+      'Custom reporting',
+      'Performance benchmarking'
+    ],
+    icon: '📊',
+    gradient: 'from-purple-500/20 to-pink-500/20'
+  },
+  {
+    title: 'Document Management',
+    description: 'Streamline document workflows and compliance',
+    features: [
+      'Automated document generation',
+      'E-signature workflows',
+      'Compliance tracking',
+      'Version control and audit trails'
+    ],
+    icon: '📄',
+    gradient: 'from-pink-500/20 to-cyan-500/20'
+  }
+];
+
+const results = [
+  {
+    metric: '40+',
+    label: 'Hours Saved Per Week',
+    description: 'Eliminate manual tasks and focus on growth'
+  },
+  {
+    metric: '95%',
+    label: 'Reduction in Errors',
+    description: 'Automated processes ensure consistency'
+  },
+  {
+    metric: '300%',
+    label: 'ROI Increase',
+    description: 'Typical return on automation investment'
+  },
+  {
+    metric: '24/7',
+    label: 'System Monitoring',
+    description: 'Always-on performance and reliability'
+  }
+];
+
+const testimonials = [
+  {
+    quote: "Autera transformed our entire operation. We went from spending 60% of our time on manual tasks to focusing on strategic growth. The ROI was immediate.",
+    author: "Sarah Chen",
+    role: "CEO, TechFlow Solutions",
+    company: "TechFlow Solutions"
+  },
+  {
+    quote: "The automation systems Autera built for us have saved us over $200K annually in operational costs. It's like having a full-time operations team that never sleeps.",
+    author: "Michael Rodriguez",
+    role: "Operations Director, GrowthCorp",
+    company: "GrowthCorp"
+  }
+];
 
 export default function About() {
   return (
-    <main className="min-h-screen bg-black text-white overflow-hidden">
+    <div className="min-h-screen flex flex-col bg-white text-gray-900 overflow-hidden">
       <Navbar />
-      
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-black via-gray-900 to-black pt-36 pb-24 overflow-hidden">
-        {/* Futuristic Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-blue-500/10"></div>
-        <div className="absolute top-20 left-10 w-96 h-96 bg-cyan-400/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-blue-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-500/5 rounded-full blur-3xl"></div>
-        
-        {/* Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-        
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 rounded-full shadow-lg shadow-cyan-400/50"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h1 className="text-7xl md:text-8xl font-black text-white mb-8 tracking-tight">About Autera</h1>
-          <p className="text-3xl md:text-4xl text-gray-300 max-w-4xl mx-auto mb-6 font-light tracking-wide">The silent infrastructure behind great companies</p>
-        </div>
-      </section>
+      <main className="flex-grow">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-b from-white via-gray-50 to-white pt-20 sm:pt-24 md:pt-32 pb-16 sm:pb-24 md:pb-32 overflow-hidden">
+          {/* Subtle Background Elements */}
+          <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5"></div>
+          <div className="absolute top-20 left-10 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-blue-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          
+          {/* Grid Pattern */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.05)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+          
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 rounded-full shadow-lg shadow-cyan-400/50"></div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div className="mb-8">
+              <span className="inline-block px-6 py-3 bg-cyan-50 border border-cyan-200 rounded-full text-cyan-600 font-bold text-sm tracking-wider uppercase">
+                Complete Business Transformation
+              </span>
+            </div>
+            <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black text-gray-900 mb-6 sm:mb-8 tracking-tight leading-none">
+              <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
+                AUTOMATION
+              </span>
+              <br />
+              <span className="text-gray-900">INFRASTRUCTURE</span>
+            </h1>
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-600 max-w-5xl mx-auto mb-8 sm:mb-12 font-light tracking-wide leading-relaxed px-4">
+              We design invisible systems that run your business with precision. Quiet. Efficient. Always on.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center px-4">
+              <Link href="/apply" className="inline-flex items-center px-6 sm:px-12 py-4 sm:py-6 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-2xl font-black text-lg sm:text-xl shadow-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-cyan-500/25 tracking-wider w-full sm:w-auto text-center justify-center">
+                Apply for Partnership
+              </Link>
+              <Link href="/products" className="inline-flex items-center px-6 sm:px-12 py-4 sm:py-6 border-2 border-cyan-500 text-cyan-600 rounded-2xl font-bold text-lg sm:text-xl hover:bg-cyan-50 transition-all duration-300 tracking-wider w-full sm:w-auto text-center justify-center">
+                View Our Systems
+              </Link>
+            </div>
+          </div>
+        </section>
 
-      {/* Story Section */}
-      <section className="py-24 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">
-        {/* Futuristic Background */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.1)_0%,transparent_70%)]"></div>
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div>
-              <h2 className="text-5xl md:text-6xl font-black text-white mb-10 tracking-tight">
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">Our Standard</span>
+        {/* Process Steps */}
+        <section className="py-32 bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.05)_0%,transparent_70%)]"></div>
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent"></div>
+          <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400/30 to-transparent"></div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-12 sm:mb-20">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-6 sm:mb-8 tracking-tight px-4">
+                Our <span className="bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">Process</span>
               </h2>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed tracking-wide">
-                Autera was built for operators, not dreamers. We design systems that make companies run flawlessly.
-              </p>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed tracking-wide">
-                We engineer automation infrastructure for high-performance teams that demand precision. 
-                Our systems operate silently, efficiently, always on.
-              </p>
-              <p className="text-xl text-gray-300 leading-relaxed tracking-wide">
-                We choose who we work with. Our systems are designed for companies that operate at a higher standard.
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto tracking-wide px-4">
+                A proven methodology that transforms companies from operational chaos to precision excellence
               </p>
             </div>
-            <div className="bg-gradient-to-br from-gray-900/90 to-black/90 p-12 rounded-3xl shadow-2xl border border-cyan-400/30 backdrop-blur-sm">
-              <h3 className="text-3xl font-black text-cyan-300 mb-8 tracking-wider">Our Mission</h3>
-              <p className="text-lg text-gray-300 mb-10 leading-relaxed tracking-wide">
-                To engineer automation infrastructure that operates with precision, silence, and excellence.
-              </p>
-              <h3 className="text-3xl font-black text-cyan-300 mb-8 tracking-wider">Our Vision</h3>
-              <p className="text-lg text-gray-300 leading-relaxed tracking-wide">
-                To be the silent infrastructure behind every great company that demands operational excellence.
-              </p>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
+              {processSteps.map((step, index) => (
+                <div key={index} className="group relative">
+                  <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6 lg:space-x-8">
+                    <div className="flex-1 text-center sm:text-left">
+                      <div className="flex flex-col sm:flex-row items-center sm:items-start mb-4">
+                        <div className="relative mb-4 sm:mb-0 sm:mr-8">
+                          <span className="text-6xl sm:text-7xl lg:text-8xl font-black bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 bg-clip-text text-transparent drop-shadow-2xl">
+                            {step.number}
+                          </span>
+                          <div className="absolute -inset-2 bg-gradient-to-r from-cyan-400/20 via-blue-400/20 to-purple-400/20 rounded-full blur-xl"></div>
+                        </div>
+                        <div>
+                          <h3 className="text-xl sm:text-2xl lg:text-3xl font-black text-gray-900 mb-2 tracking-tight">{step.title}</h3>
+                          <p className="text-sm sm:text-base lg:text-lg text-cyan-600 font-bold tracking-wider">{step.subtitle}</p>
+                        </div>
+                      </div>
+                      <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-4 sm:mb-6 leading-relaxed">{step.description}</p>
+                      <ul className="space-y-2 sm:space-y-3">
+                        {step.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-start sm:items-center">
+                            <div className={`w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 shadow-lg mt-0.5 sm:mt-0`}>
+                              <span className="text-white text-xs font-bold">✓</span>
+                            </div>
+                            <span className="text-gray-600 text-sm sm:text-base lg:text-lg font-medium tracking-wide">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Values Section */}
-      <section className="py-24 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">
-        {/* Futuristic Background */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.1)_0%,transparent_70%)]"></div>
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h2 className="text-5xl md:text-6xl font-black text-white text-center mb-16 tracking-tight">
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">Our Principles</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-            {values.map((value, index) => (
-              <div key={index} className="bg-gradient-to-br from-gray-900/90 to-black/90 p-10 rounded-3xl shadow-2xl border border-cyan-400/30 backdrop-blur-sm hover:border-cyan-400/60 transition-all duration-500">
-                <h3 className="text-2xl font-black text-cyan-300 mb-6 tracking-wider">{value.title}</h3>
-                <p className="text-gray-300 text-lg leading-relaxed tracking-wide">{value.description}</p>
+        {/* Capabilities Grid */}
+        <section className="py-32 bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.05)_0%,transparent_70%)]"></div>
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent"></div>
+          <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400/30 to-transparent"></div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-12 sm:mb-20">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-6 sm:mb-8 tracking-tight px-4">
+                Core <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Capabilities</span>
+              </h2>
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto tracking-wide px-4">
+                Comprehensive infrastructure solutions that cover every aspect of your operational excellence
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+              {capabilities.map((capability, index) => (
+                <div key={index} className="group relative bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 border border-cyan-200 hover:border-cyan-400">
+                  <div className={`absolute inset-0 bg-gradient-to-br ${capability.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl`}></div>
+                  <div className="relative z-10">
+                    <div className="flex flex-col sm:flex-row items-center sm:items-start mb-6">
+                      <div className="text-4xl sm:text-5xl mr-0 sm:mr-6 mb-4 sm:mb-0">{capability.icon}</div>
+                      <div className="text-center sm:text-left">
+                        <h3 className="text-xl sm:text-2xl lg:text-3xl font-black text-gray-900 mb-2 tracking-tight">{capability.title}</h3>
+                        <p className="text-sm sm:text-base lg:text-lg text-gray-600 font-medium tracking-wide">{capability.description}</p>
+                      </div>
+                    </div>
+                    <ul className="space-y-3 sm:space-y-4">
+                      {capability.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-start sm:items-center">
+                          <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 shadow-lg shadow-cyan-400/25 mt-0.5 sm:mt-0">
+                            <span className="text-white text-xs font-bold">✓</span>
+                          </div>
+                          <span className="text-gray-600 text-sm sm:text-base lg:text-lg font-medium tracking-wide">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Results Section - HIDDEN FOR NOW */}
+        {/* 
+        <section className="py-32 bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.05)_0%,transparent_70%)]"></div>
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent"></div>
+          <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400/30 to-transparent"></div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-12 sm:mb-20">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-6 sm:mb-8 tracking-tight px-4">
+                Proven <span className="bg-gradient-to-r from-green-600 to-cyan-600 bg-clip-text text-transparent">Results</span>
+              </h2>
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto tracking-wide px-4">
+                Real metrics from businesses that have transformed their operations with Autera
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+              {results.map((result, index) => (
+                <div key={index} className="group relative bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 border border-cyan-200 hover:border-cyan-400 text-center">
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+                  <div className="relative z-10">
+                    <div className="text-4xl sm:text-5xl lg:text-6xl font-black text-cyan-600 mb-3 sm:mb-4 tracking-tight">{result.metric}</div>
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-2 sm:mb-3 tracking-tight">{result.label}</h3>
+                    <p className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed">{result.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        */}
+
+        {/* Testimonials - HIDDEN FOR NOW */}
+        {/* 
+        <section className="py-32 bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.05)_0%,transparent_70%)]"></div>
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent"></div>
+          <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400/30 to-transparent"></div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-12 sm:mb-20">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-6 sm:mb-8 tracking-tight px-4">
+                Client <span className="bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent">Success</span>
+              </h2>
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto tracking-wide px-4">
+                Hear from business leaders who've transformed their operations with Autera
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="group relative bg-white rounded-3xl p-6 sm:p-8 lg:p-12 shadow-xl hover:shadow-2xl transition-all duration-500 border border-cyan-200 hover:border-cyan-400">
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+                  <div className="relative z-10">
+                    <div className="text-4xl sm:text-5xl lg:text-6xl text-cyan-600 mb-4 sm:mb-6">"</div>
+                    <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-6 sm:mb-8 leading-relaxed font-medium tracking-wide">{testimonial.quote}</p>
+                    <div className="border-t border-cyan-200 pt-4 sm:pt-6">
+                      <p className="text-lg sm:text-xl font-bold text-gray-900 mb-1">{testimonial.author}</p>
+                      <p className="text-base sm:text-lg text-cyan-600 font-medium">{testimonial.role}</p>
+                      <p className="text-sm sm:text-base text-gray-500 font-medium">{testimonial.company}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        */}
+
+        {/* CTA Section */}
+        <section className="bg-gradient-to-br from-white via-gray-50 to-white py-32 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.05)_0%,transparent_70%)]"></div>
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent"></div>
+          <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400/30 to-transparent"></div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div className="bg-white rounded-3xl p-6 sm:p-12 lg:p-20 border border-cyan-200 shadow-xl">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-6 sm:mb-8 lg:mb-10 tracking-tight px-4">
+                Ready to <span className="bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">Transform</span> Your Business?
+              </h2>
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-12 lg:mb-16 max-w-5xl mx-auto leading-relaxed tracking-wide px-4">
+                Join companies that have already established operational infrastructure and are seeing dramatic improvements in precision, efficiency, and excellence.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 justify-center items-center px-4">
+                <Link href="/apply" className="inline-flex items-center px-8 sm:px-12 lg:px-16 py-6 sm:py-7 lg:py-8 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-3xl font-black text-lg sm:text-xl lg:text-2xl shadow-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-cyan-500/25 tracking-wider w-full sm:w-auto text-center justify-center">
+                  Apply for Partnership
+                </Link>
+                <div className="text-center">
+                  <p className="text-cyan-600 text-base sm:text-lg font-bold tracking-wider mb-1 sm:mb-2">⏱️ Reserved for qualified companies</p>
+                  <p className="text-gray-500 text-sm sm:text-base tracking-wide">Our systems are designed for companies that operate at a higher standard</p>
+                </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-24 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">
-        {/* Futuristic Background */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.1)_0%,transparent_70%)]"></div>
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h2 className="text-5xl md:text-6xl font-black text-white text-center mb-8 tracking-tight">
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">Our Expertise</span>
-          </h2>
-          <p className="text-2xl text-center text-gray-300 mb-16 tracking-wide">
-            We engineer automation infrastructure for companies that demand operational excellence
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div className="bg-gradient-to-br from-gray-900/90 to-black/90 p-10 rounded-3xl shadow-2xl border border-cyan-400/30 backdrop-blur-sm hover:border-cyan-400/60 transition-all duration-500">
-              <h3 className="text-2xl font-black text-cyan-300 mb-6 tracking-wider">Intelligence Architecture</h3>
-              <p className="text-gray-300 text-lg leading-relaxed tracking-wide">
-                Custom intelligence systems engineered for precision and operational excellence.
-              </p>
-            </div>
-            <div className="bg-gradient-to-br from-gray-900/90 to-black/90 p-10 rounded-3xl shadow-2xl border border-cyan-400/30 backdrop-blur-sm hover:border-cyan-400/60 transition-all duration-500">
-              <h3 className="text-2xl font-black text-cyan-300 mb-6 tracking-wider">Operational Infrastructure</h3>
-              <p className="text-gray-300 text-lg leading-relaxed tracking-wide">
-                Complete operational systems designed for companies that demand excellence.
-              </p>
-            </div>
-            <div className="bg-gradient-to-br from-gray-900/90 to-black/90 p-10 rounded-3xl shadow-2xl border border-cyan-400/30 backdrop-blur-sm hover:border-cyan-400/60 transition-all duration-500">
-              <h3 className="text-2xl font-black text-cyan-300 mb-6 tracking-wider">System Integration</h3>
-              <p className="text-gray-300 text-lg leading-relaxed tracking-wide">
-                Seamless integration with your existing infrastructure for maximum operational efficiency.
-              </p>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
-  )
-} 
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+}

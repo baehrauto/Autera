@@ -8,6 +8,30 @@ import { useState, useEffect } from 'react';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [visibleCards, setVisibleCards] = useState<Set<number>>(new Set());
+
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = parseInt(entry.target.getAttribute('data-index') || '0');
+          setVisibleCards((prev) => new Set(prev).add(index));
+        }
+      });
+    }, observerOptions);
+
+    const cards = document.querySelectorAll('[data-philosophy-card]');
+    cards.forEach((card) => observer.observe(card));
+
+    return () => {
+      cards.forEach((card) => observer.unobserve(card));
+    };
+  }, []);
 
   const stats = [
     { number: '129%', label: 'more leads acquired' },
@@ -54,8 +78,8 @@ export default function Home() {
     },
     {
       number: '1000+',
-      label: 'Tasks automated',
-      description: 'Let AI handle the routine'
+      label: 'Tasks systematized',
+      description: 'Let intelligence handle the routine'
     },
     {
       number: '24/7',
@@ -85,17 +109,17 @@ export default function Home() {
     {
       number: '99.5%',
       label: 'System uptime',
-      description: 'Reliable automation'
+      description: 'Reliable systems'
     },
     {
       number: '0',
       label: 'Manual interventions',
-      description: 'Full end-to-end automation'
+      description: 'Full end-to-end systems'
     },
     {
       number: '40%',
       label: 'Time saved on emails',
-      description: 'Automated inbox management'
+      description: 'Systematic inbox management'
     },
     {
       number: '100%',
@@ -114,7 +138,7 @@ export default function Home() {
     },
     {
       number: '2 days',
-      label: 'Average setup time',
+      label: 'Average infrastructure time',
       description: 'Quick time to value'
     },
     {
@@ -146,384 +170,68 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-black text-white overflow-hidden">
+    <div className="min-h-screen flex flex-col bg-white text-gray-900 overflow-hidden">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 px-4 overflow-hidden">
-        {/* Futuristic Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-blue-500/10"></div>
-        <div className="absolute top-20 left-10 w-96 h-96 bg-cyan-400/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-blue-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-500/5 rounded-full blur-3xl"></div>
+      <section className="relative pt-32 pb-24 px-4 overflow-hidden bg-white">
+        {/* Subtle Background Elements */}
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5"></div>
+        <div className="absolute top-20 left-10 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-blue-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         
         {/* Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.05)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
         
         <div className="relative max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-full text-cyan-300 text-sm font-medium mb-8 border border-cyan-500/30">
-            <div className="w-3 h-3 bg-cyan-400 rounded-full mr-3 animate-pulse shadow-lg shadow-cyan-400/50"></div>
-            <span className="tracking-wider uppercase">Automation Infrastructure</span>
-          </div>
-          
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-6 sm:mb-8 leading-tight tracking-tight px-4">
-            We design invisible systems that run your business with{' '}
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-              precision
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-gray-900 mb-6 sm:mb-8 leading-tight tracking-tight px-4">
+            Precision in<br />
+            <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
+              motion
             </span>.
           </h1>
           
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-300 max-w-5xl mx-auto mb-8 sm:mb-12 font-light leading-relaxed tracking-wide px-4">
-            Autera builds automation infrastructure for high-performance teams. Quiet. Efficient. Always on.
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-600 max-w-5xl mx-auto mb-8 sm:mb-12 font-light leading-relaxed tracking-wide px-4">
+            Systems that outlast their creators.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 mb-8 sm:mb-12 px-4">
             <Link 
               href="/apply"
-              className="group relative px-6 sm:px-8 lg:px-10 py-4 sm:py-5 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-2xl font-bold text-base sm:text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-2 border border-cyan-400/50 w-full sm:w-auto text-center justify-center"
+              className="group relative px-6 sm:px-8 lg:px-10 py-4 sm:py-5 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-2xl font-bold text-base sm:text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-xl hover:shadow-cyan-500/25 transform hover:-translate-y-2 w-full sm:w-auto text-center justify-center"
             >
-              <span className="relative z-10 tracking-wider">Apply for Partnership</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <span className="relative z-10 tracking-wider">Request Access</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
             <Link 
-              href="/solutions"
-              className="px-6 sm:px-8 lg:px-10 py-4 sm:py-5 bg-transparent text-cyan-300 rounded-2xl font-bold text-base sm:text-lg border-2 border-cyan-400/50 hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300 transform hover:-translate-y-2 backdrop-blur-sm w-full sm:w-auto text-center justify-center"
+              href="/about"
+              className="px-6 sm:px-8 lg:px-10 py-4 sm:py-5 bg-transparent text-cyan-600 rounded-2xl font-bold text-base sm:text-lg border-2 border-cyan-500 hover:bg-cyan-50 hover:border-cyan-600 transition-all duration-300 transform hover:-translate-y-2 w-full sm:w-auto text-center justify-center"
             >
-              View Our Systems
-            </Link>
-            <Link 
-              href="/portfolio"
-              className="px-6 sm:px-8 lg:px-10 py-4 sm:py-5 bg-transparent text-purple-300 rounded-2xl font-bold text-base sm:text-lg border-2 border-purple-400/50 hover:bg-purple-400/10 hover:border-purple-400 transition-all duration-300 transform hover:-translate-y-2 backdrop-blur-sm w-full sm:w-auto text-center justify-center"
-            >
-              See Our Work
+              View Systems
             </Link>
           </div>
         </div> {/* End .max-w-7xl mx-auto text-center */}
       </section> {/* End Hero Section */}
 
-      {/* The Autera Promise Section */}
-      <section className="py-24 bg-gradient-to-b from-gray-900 via-black to-gray-900 relative overflow-hidden">
-        {/* Background Effects */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.1)_0%,transparent_70%)]"></div>
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12 sm:mb-20">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 sm:mb-8 tracking-tight px-4">
-              The <span className="bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">Autera Standard</span>
-            </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto tracking-wide px-4">
-              Precision in motion. Automation, engineered.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
-            {/* Full System Ownership */}
-            <div className="group relative bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl border border-cyan-400/30 p-6 sm:p-8 lg:p-10 hover:border-cyan-400/60 hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-500 transform hover:-translate-y-2">
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
-              <div className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-cyan-400/25">
-                  <div className="w-8 h-8 border-2 border-white rounded-sm flex items-center justify-center">
-                    <div className="w-3 h-3 bg-white rounded-sm"></div>
-                  </div>
-                </div>
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6 tracking-wide">Complete Ownership</h3>
-                <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed mb-4 sm:mb-6">
-                  Every system we engineer becomes yours. No dependencies, no limitations. 
-                  Your infrastructure, your control, your competitive advantage.
-                </p>
-                <div className="w-full h-px bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent"></div>
-              </div>
-            </div>
-
-            {/* Team Training & Knowledge Transfer */}
-            <div className="group relative bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl border border-blue-400/30 p-10 hover:border-blue-400/60 hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-500 transform hover:-translate-y-2">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
-              <div className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-400 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-400/25">
-                  <div className="w-8 h-8 border-2 border-white rounded-lg flex items-center justify-center">
-                    <div className="w-4 h-2 bg-white rounded-sm"></div>
-                  </div>
-                </div>
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6 tracking-wide">Knowledge Transfer</h3>
-                <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed mb-4 sm:mb-6">
-                  We don't simply deliver systems. We transfer complete operational knowledge. 
-                  Your team masters the infrastructure, ensuring continuous excellence.
-                </p>
-                <div className="w-full h-px bg-gradient-to-r from-transparent via-blue-400/50 to-transparent"></div>
-              </div>
-            </div>
-
-            {/* No Vendor Dependency */}
-            <div className="group relative bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl border border-purple-400/30 p-10 hover:border-purple-400/60 hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-500 transform hover:-translate-y-2">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
-              <div className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-purple-400/25">
-                  <div className="w-8 h-8 border-2 border-white rounded-lg flex items-center justify-center">
-                    <div className="w-3 h-3 bg-white rounded-sm"></div>
-                  </div>
-                </div>
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6 tracking-wide">Operational Independence</h3>
-                <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed mb-4 sm:mb-6">
-                  Your systems operate independently. Complete documentation, full source code, 
-                  and comprehensive knowledge transfer ensure uninterrupted excellence.
-                </p>
-                <div className="w-full h-px bg-gradient-to-r from-transparent via-purple-400/50 to-transparent"></div>
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom CTA */}
-          <div className="text-center mt-16">
-            <div className="bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl border border-cyan-400/30 p-6 sm:p-8 lg:p-12 max-w-4xl mx-auto">
-              <h4 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6 tracking-wide">Built for Discipline</h4>
-              <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed mb-6 sm:mb-8">
-                We engineer systems for companies that demand excellence. 
-                Your operational superiority becomes our standard.
-              </p>
-              <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 mx-auto rounded-full"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Products Section */}
-      <section className="py-32 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.05)_0%,transparent_70%)]"></div>
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12 sm:mb-20">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 sm:mb-8 tracking-tight px-4">
-              Our <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Systems</span>
-            </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto tracking-wide px-4">
-              Custom-engineered infrastructure for high-performance operations
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
-            {/* Custom Website Development */}
-            <div className="group relative bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl border border-cyan-400/30 shadow-2xl hover:shadow-cyan-500/25 hover:border-cyan-400/60 transition-all duration-500 p-6 sm:p-8 lg:p-10 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute top-0 right-0 w-40 h-40 bg-cyan-400/20 rounded-full blur-3xl animate-pulse"></div>
-              
-              <div className="relative z-10">
-                <div className="flex items-center mb-8">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-2xl flex items-center justify-center mr-6 shadow-lg shadow-cyan-400/25">
-                    <div className="w-8 h-8 bg-black rounded-lg"></div>
-            </div>
-                  <div>
-                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-2 tracking-tight">Autera Sites</h3>
-                    <p className="text-sm sm:text-base lg:text-lg text-cyan-300 font-bold tracking-wider">Operational Gateways</p>
-                  </div>
-                </div>
-                
-                <p className="text-base sm:text-lg lg:text-xl text-gray-300 mb-6 sm:mb-8 leading-relaxed">
-                  Operational gateways that convert attention directly into workflow. 
-                  Every interaction engineered to drive business forward with precision.
-                </p>
-                
-                <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
-                  <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-cyan-300 mb-3 sm:mb-4">System Architecture:</h4>
-                  <ul className="space-y-3 sm:space-y-4">
-                    <li className="flex items-start">
-                      <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-0.5 sm:mt-1 shadow-lg">
-                        <span className="text-black text-xs font-bold">✓</span>
-                      </div>
-                      <span className="text-gray-300 text-sm sm:text-base lg:text-lg font-medium tracking-wide">Precision-engineered user experience for maximum conversion</span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
-                        <span className="text-black text-xs font-bold">✓</span>
-                      </div>
-                      <span className="text-gray-300 text-lg font-medium tracking-wide">Universal compatibility across all operational environments</span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
-                        <span className="text-black text-xs font-bold">✓</span>
-                      </div>
-                      <span className="text-gray-300 text-lg font-medium tracking-wide">Intelligent content management for seamless operations</span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
-                        <span className="text-black text-xs font-bold">✓</span>
-                      </div>
-                      <span className="text-gray-300 text-lg font-medium tracking-wide">Performance optimization for maximum operational efficiency</span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
-                        <span className="text-black text-xs font-bold">✓</span>
-                      </div>
-                      <span className="text-gray-300 text-lg font-medium tracking-wide">Infrastructure deployment and continuous optimization</span>
-                    </li>
-                  </ul>
-                </div>
-                
-                <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl p-6 border border-cyan-400/30">
-                  <div className="text-center">
-                    <div className="text-4xl font-black text-white mb-2">
-                      Reserved for Qualified Companies
-                    </div>
-                    <p className="text-gray-300 text-lg mb-6">Apply for partnership to access our systems</p>
-                    <Link href="/apply" className="inline-block px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-xl font-bold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-1 border border-cyan-400/50">
-                      Apply for Partnership
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Custom Voice Agents */}
-            <div className="group relative bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl border border-purple-400/30 shadow-2xl hover:shadow-purple-500/25 hover:border-purple-400/60 transition-all duration-500 p-10 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute top-0 right-0 w-40 h-40 bg-purple-400/20 rounded-full blur-3xl animate-pulse"></div>
-              
-              <div className="relative z-10">
-                <div className="flex items-center mb-8">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-2xl flex items-center justify-center mr-6 shadow-lg shadow-purple-400/25">
-                    <div className="w-8 h-8 bg-black rounded-lg transform rotate-45"></div>
-                  </div>
-                  <div>
-                    <h3 className="text-4xl font-black text-white mb-2 tracking-tight">
-                      <span className="bg-gradient-to-r from-purple-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent">Autera AI</span>
-                    </h3>
-                    <p className="text-lg text-purple-300 font-bold tracking-wider">Thinking Layer for Precision</p>
-                  </div>
-                </div>
-                
-                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  A thinking layer built for precision, not a chatbot. 
-                  Intelligent systems that understand context, execute decisions, and maintain operational excellence.
-                </p>
-                
-                <div className="space-y-6 mb-8">
-                  <h4 className="text-2xl font-bold text-purple-300 mb-4">System Capabilities:</h4>
-                  <ul className="space-y-4">
-                    <li className="flex items-start">
-                      <div className="w-6 h-6 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
-                        <span className="text-black text-xs font-bold">✓</span>
-                      </div>
-                      <span className="text-gray-300 text-lg font-medium tracking-wide">Advanced contextual reasoning and decision execution</span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-6 h-6 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
-                        <span className="text-black text-xs font-bold">✓</span>
-                      </div>
-                      <span className="text-gray-300 text-lg font-medium tracking-wide">Custom intelligence architecture for your operations</span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-6 h-6 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
-                        <span className="text-black text-xs font-bold">✓</span>
-                      </div>
-                      <span className="text-gray-300 text-lg font-medium tracking-wide">Seamless integration with your operational infrastructure</span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-6 h-6 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
-                        <span className="text-black text-xs font-bold">✓</span>
-                      </div>
-                      <span className="text-gray-300 text-lg font-medium tracking-wide">Universal operational language support</span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-6 h-6 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
-                        <span className="text-black text-xs font-bold">✓</span>
-                      </div>
-                      <span className="text-gray-300 text-lg font-medium tracking-wide">Real-time operational intelligence and performance analytics</span>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-6 h-6 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
-                        <span className="text-black text-xs font-bold">✓</span>
-                      </div>
-                      <span className="text-gray-300 text-lg font-medium tracking-wide">Continuous operational availability with intelligent escalation</span>
-                    </li>
-                  </ul>
-                </div>
-                
-                <div className="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 rounded-2xl p-6 border border-purple-400/30">
-                  <div className="text-center">
-                    <div className="text-4xl font-black text-white mb-2">
-                      Reserved for Qualified Companies
-                    </div>
-                    <p className="text-gray-300 text-lg mb-6">Apply for partnership to access our systems</p>
-                    <Link href="/apply" className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-500 text-black rounded-xl font-bold text-lg hover:from-purple-400 hover:to-indigo-400 transition-all duration-300 shadow-2xl hover:shadow-purple-500/25 transform hover:-translate-y-1 border border-purple-400/50">
-                      Apply for Partnership
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* Give Business Owners Their TIME BACK Section */}
-      <section className="py-20 bg-gradient-to-b from-black via-gray-900 to-black w-full overflow-hidden relative">
-        {/* Futuristic Background */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.1)_0%,transparent_70%)]"></div>
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
-        
-        <div className="text-center mb-12 relative z-10">
-          <h2 className="text-5xl md:text-6xl font-black text-white mb-6 tracking-tight">
-            Precision in{' '}
-            <span className="bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 bg-clip-text text-transparent animate-pulse">
-              Motion
-            </span>
-          </h2>
-          <p className="text-2xl text-gray-300 max-w-4xl mx-auto tracking-wide">
-            Operational excellence from companies that demand continuous innovation
-          </p>
-        </div>
-        <div className="relative overflow-hidden w-full">
-          <div className="flex gap-8 animate-scroll w-full">
-            {/* First set of metrics */}
-            {metrics.map((metric, index) => (
-              <div 
-                key={`first-${index}`}
-                className="w-[400px] flex-shrink-0 p-8 rounded-3xl bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm border border-cyan-400/30 hover:border-cyan-400/60 hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-500 transform hover:-translate-y-2"
-              >
-                <div className="text-6xl font-black bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-4 tracking-tight">{metric.number}</div>
-                <div className="text-2xl font-bold text-white mb-3 tracking-wider">{metric.label}</div>
-                <p className="text-base text-gray-300 leading-relaxed tracking-wide">{metric.description}</p>
-              </div>
-            ))}
-            {/* Second set of metrics for seamless loop */}
-            {metrics.map((metric, index) => (
-              <div 
-                key={`second-${index}`}
-                className="w-[400px] flex-shrink-0 p-8 rounded-3xl bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm border border-cyan-400/30 hover:border-cyan-400/60 hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-500 transform hover:-translate-y-2"
-              >
-                <div className="text-6xl font-black bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-4 tracking-tight">{metric.number}</div>
-                <div className="text-2xl font-bold text-white mb-3 tracking-wider">{metric.label}</div>
-                <p className="text-base text-gray-300 leading-relaxed tracking-wide">{metric.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Services Section */}
-      <section className="py-32 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">
+      <section className="py-32 bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.05)_0%,transparent_70%)]"></div>
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400/30 to-transparent"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
-            <h2 className="text-6xl md:text-7xl font-black text-white mb-8 tracking-tight">
-              Partnership <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Program</span>
+            <h2 className="text-6xl md:text-7xl font-black text-gray-900 mb-8 tracking-tight">
+              Partnership <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Program</span>
             </h2>
-            <p className="text-2xl text-gray-300 max-w-4xl mx-auto tracking-wide">
-              Reserved for businesses that demand continuous innovation
+            <p className="text-2xl text-gray-600 max-w-4xl mx-auto tracking-wide">
+              For owners who choose time over management.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Starter Service */}
-          <div className="group relative bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl border border-cyan-400/30 shadow-2xl hover:shadow-cyan-500/25 hover:border-cyan-400/60 transition-all duration-500 p-8 flex flex-col min-h-[700px] overflow-hidden">
+          <div className="group relative bg-white rounded-3xl border border-cyan-200 shadow-xl hover:shadow-2xl hover:border-cyan-400 transition-all duration-500 p-8 flex flex-col min-h-[700px] overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="absolute top-0 right-0 w-40 h-40 bg-cyan-400/20 rounded-full blur-3xl animate-pulse"></div>
             
@@ -534,20 +242,20 @@ export default function Home() {
                     <div className="w-5 h-5 bg-black rounded-sm"></div>
                   </div>
                 </div>
-                  <h3 className="text-4xl md:text-5xl font-black text-white mb-3 tracking-wider">FOUNDATION</h3>
+                  <h3 className="text-4xl md:text-5xl font-black text-gray-900 mb-3 tracking-wider">FOUNDATION</h3>
                 <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 mx-auto rounded-full mb-4 shadow-lg shadow-cyan-400/50"></div>
-                <p className="text-lg text-gray-300 font-medium tracking-wide">Essential infrastructure for operational excellence</p>
+                <p className="text-lg text-gray-600 font-medium tracking-wide">Essential infrastructure for operational excellence</p>
               </div>
               
               <div className="flex-grow">
                   <div className="mb-6">
-                    <h4 className="text-xl font-bold text-cyan-300 mb-4">Designed for:</h4>
-                    <p className="text-gray-300 text-lg leading-relaxed mb-4">
+                    <h4 className="text-xl font-bold text-cyan-600 mb-4">Designed for:</h4>
+                    <p className="text-gray-600 text-lg leading-relaxed mb-4">
                       Companies establishing operational infrastructure for sustained excellence.
                     </p>
                   </div>
                   
-                <ul className="space-y-5 text-base text-gray-300">
+                <ul className="space-y-5 text-base text-gray-600">
                   <li className="flex items-center space-x-4">
                     <div className="w-7 h-7 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-cyan-400/25">
                       <span className="text-white text-sm font-bold">✓</span>
@@ -581,14 +289,14 @@ export default function Home() {
               </ul>
               </div>
               
-              <div className="mt-8 pt-6 border-t border-cyan-400/30">
+              <div className="mt-8 pt-6 border-t border-cyan-200">
                 <div className="text-center mb-6">
-                  <div className="text-5xl font-black text-white mb-2 tracking-tight">
-                    $1,500<span className="text-2xl font-normal text-cyan-300">/month</span>
+                  <div className="text-5xl font-black text-gray-900 mb-2 tracking-tight">
+                    $1,500<span className="text-2xl font-normal text-cyan-600">/month</span>
                   </div>
-                  <p className="text-sm text-gray-400 font-medium tracking-wide">Foundation infrastructure + assessment + oversight</p>
+                  <p className="text-sm text-gray-500 font-medium tracking-wide">Foundation infrastructure + assessment + oversight</p>
                 </div>
-                <Link href="/apply" className="block w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-xl font-bold text-center hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-1 border border-cyan-400/50">
+                <Link href="/apply" className="block w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-bold text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-xl hover:shadow-cyan-500/25 transform hover:-translate-y-1">
                   Apply for Partnership
                 </Link>
               </div>
@@ -596,7 +304,7 @@ export default function Home() {
           </div>
 
             {/* Growth Service */}
-          <div className="group relative bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl border border-cyan-400/30 shadow-2xl hover:shadow-cyan-500/25 hover:border-cyan-400/60 transition-all duration-500 p-8 flex flex-col min-h-[700px] overflow-hidden">
+          <div className="group relative bg-white rounded-3xl border border-blue-200 shadow-xl hover:shadow-2xl hover:border-blue-400 transition-all duration-500 p-8 flex flex-col min-h-[700px] overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="absolute top-0 right-0 w-40 h-40 bg-cyan-400/10 rounded-full blur-3xl animate-pulse"></div>
             
@@ -604,25 +312,25 @@ export default function Home() {
               <div className="text-center mb-8">
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl mb-6 border border-cyan-400/30">
                   <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-lg flex items-center justify-center shadow-lg shadow-cyan-400/25">
-                    <div className="w-5 h-5 bg-black rounded-sm"></div>
+                    <div className="w-5 h-5 bg-white rounded-sm"></div>
                   </div>
                 </div>
-                  <h3 className="text-4xl md:text-5xl font-black text-white mb-3 tracking-wider">
-                  <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent">ADVANCED</span>
+                  <h3 className="text-4xl md:text-5xl font-black text-gray-900 mb-3 tracking-wider">
+                  <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">ADVANCED</span>
                   </h3>
                 <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 mx-auto rounded-full mb-4 shadow-lg shadow-cyan-400/50"></div>
-                <p className="text-lg text-gray-300 font-medium tracking-wide">Comprehensive infrastructure for operational mastery</p>
+                <p className="text-lg text-gray-600 font-medium tracking-wide">Comprehensive infrastructure for operational mastery</p>
               </div>
               
               <div className="flex-grow">
                   <div className="mb-6">
-                    <h4 className="text-xl font-bold text-blue-300 mb-4">Designed for:</h4>
-                    <p className="text-gray-300 text-lg leading-relaxed mb-4">
+                    <h4 className="text-xl font-bold text-blue-600 mb-4">Designed for:</h4>
+                    <p className="text-gray-600 text-lg leading-relaxed mb-4">
                       Companies requiring comprehensive operational infrastructure across all departments.
                     </p>
                   </div>
                   
-                <ul className="space-y-5 text-base text-gray-300">
+                <ul className="space-y-5 text-base text-gray-600">
                   <li className="flex items-center space-x-4">
                     <div className="w-7 h-7 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-400/25">
                       <span className="text-white text-sm font-bold">✓</span>
@@ -662,14 +370,14 @@ export default function Home() {
               </ul>
               </div>
               
-              <div className="mt-8 pt-6 border-t border-cyan-400/30">
+              <div className="mt-8 pt-6 border-t border-blue-200">
                 <div className="text-center mb-6">
-                  <div className="text-5xl font-black text-white mb-2 tracking-tight">
-                    $3,000<span className="text-2xl font-normal text-cyan-300">/month</span>
+                  <div className="text-5xl font-black text-gray-900 mb-2 tracking-tight">
+                    $3,000<span className="text-2xl font-normal text-blue-600">/month</span>
                   </div>
-                  <p className="text-sm text-gray-400 font-medium tracking-wide">Multi-system infrastructure + continuous excellence</p>
+                  <p className="text-sm text-gray-500 font-medium tracking-wide">Multi-system infrastructure + continuous excellence</p>
                 </div>
-                <Link href="/apply" className="block w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-xl font-bold text-center hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-1 border border-cyan-400/50">
+                <Link href="/apply" className="block w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-bold text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-xl hover:shadow-cyan-500/25 transform hover:-translate-y-1">
                   Apply for Partnership
                 </Link>
               </div>
@@ -677,7 +385,7 @@ export default function Home() {
           </div>
 
             {/* Partner Service */}
-          <div className="group relative bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-3xl border border-cyan-400/30 shadow-2xl hover:shadow-cyan-500/25 hover:border-cyan-400/60 transition-all duration-500 p-8 flex flex-col min-h-[700px] overflow-hidden">
+          <div className="group relative bg-white rounded-3xl border border-purple-200 shadow-xl hover:shadow-2xl hover:border-purple-400 transition-all duration-500 p-8 flex flex-col min-h-[700px] overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="absolute top-0 right-0 w-40 h-40 bg-cyan-400/10 rounded-full blur-3xl animate-pulse"></div>
             
@@ -685,25 +393,25 @@ export default function Home() {
               <div className="text-center mb-8">
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl mb-6 border border-cyan-400/30">
                   <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-lg flex items-center justify-center shadow-lg shadow-cyan-400/25">
-                    <div className="w-5 h-5 bg-black rounded-sm"></div>
+                    <div className="w-5 h-5 bg-white rounded-sm"></div>
                   </div>
                 </div>
-                  <h3 className="text-4xl md:text-5xl font-black text-white mb-3 tracking-wider">
-                  <span className="bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-500 bg-clip-text text-transparent">ENTERPRISE</span>
+                  <h3 className="text-4xl md:text-5xl font-black text-gray-900 mb-3 tracking-wider">
+                  <span className="bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600 bg-clip-text text-transparent">ENTERPRISE</span>
                   </h3>
                 <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 mx-auto rounded-full mb-4 shadow-lg shadow-cyan-400/50"></div>
-                <p className="text-lg text-gray-300 font-medium tracking-wide">Complete operational infrastructure with enterprise capabilities</p>
+                <p className="text-lg text-gray-600 font-medium tracking-wide">Complete operational infrastructure with enterprise capabilities</p>
               </div>
               
               <div className="flex-grow">
                   <div className="mb-6">
-                    <h4 className="text-xl font-bold text-purple-300 mb-4">Designed for:</h4>
-                    <p className="text-gray-300 text-lg leading-relaxed mb-4">
+                    <h4 className="text-xl font-bold text-purple-600 mb-4">Designed for:</h4>
+                    <p className="text-gray-600 text-lg leading-relaxed mb-4">
                       Enterprise-level companies requiring complete operational infrastructure with dedicated excellence.
                     </p>
                   </div>
                   
-                <ul className="space-y-5 text-base text-gray-300">
+                <ul className="space-y-5 text-base text-gray-600">
                   <li className="flex items-center space-x-4">
                     <div className="w-7 h-7 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-400/25">
                       <span className="text-white text-sm font-bold">✓</span>
@@ -743,14 +451,14 @@ export default function Home() {
               </ul>
               </div>
               
-              <div className="mt-8 pt-6 border-t border-cyan-400/30">
+              <div className="mt-8 pt-6 border-t border-purple-200">
                 <div className="text-center mb-6">
-                  <div className="text-5xl font-black text-white mb-2 tracking-tight">
-                    $5,000<span className="text-2xl font-normal text-cyan-300">/month</span>
+                  <div className="text-5xl font-black text-gray-900 mb-2 tracking-tight">
+                    $5,000<span className="text-2xl font-normal text-purple-600">/month</span>
                   </div>
-                  <p className="text-sm text-gray-400 font-medium tracking-wide">Deep infrastructure + weekly excellence management</p>
+                  <p className="text-sm text-gray-500 font-medium tracking-wide">Deep infrastructure + weekly excellence management</p>
                 </div>
-                <Link href="/apply" className="block w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-xl font-bold text-center hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-1 border border-cyan-400/50">
+                <Link href="/apply" className="block w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-bold text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-xl hover:shadow-cyan-500/25 transform hover:-translate-y-1">
                   Apply for Partnership
                 </Link>
                 </div>
@@ -760,15 +468,361 @@ export default function Home() {
         </div>
       </section>
 
+      {/* The Autera Philosophy Section */}
+      <section className="py-24 bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden">
+        {/* Background Effects */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.05)_0%,transparent_70%)]"></div>
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400/30 to-transparent"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12 sm:mb-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-6 sm:mb-8 tracking-tight px-4">
+              The <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">Autera Philosophy</span>
+            </h2>
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto tracking-wide px-4">
+              Precision in motion. Systems, engineered.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            {/* Perpetual Access */}
+            <div 
+              data-philosophy-card
+              data-index="0"
+              className={`group relative bg-white rounded-3xl border border-cyan-200 shadow-lg hover:border-cyan-400 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 p-6 sm:p-8 lg:p-10 ${
+                visibleCards.has(0) 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-12'
+              }`}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-cyan-400/25">
+                  <div className="w-8 h-8 border-2 border-white rounded-sm flex items-center justify-center">
+                    <div className="w-3 h-3 bg-white rounded-sm"></div>
+                  </div>
+                </div>
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6 tracking-wide">Perpetual Access</h3>
+                <div className="space-y-4 text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
+                  <p>Autera systems aren't something you set up. They're something you step into.</p>
+                  <p>Every detail is already built, refined, and ready.</p>
+                  <p className="text-gray-700 font-medium">You gain seamless access to an operation that simply works. Quietly and consistently.</p>
+                </div>
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent mt-6"></div>
+              </div>
+            </div>
+
+            {/* Continuous Refinement */}
+            <div 
+              data-philosophy-card
+              data-index="1"
+              className={`group relative bg-white rounded-3xl border border-blue-200 shadow-lg hover:border-blue-400 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 p-6 sm:p-8 lg:p-10 ${
+                visibleCards.has(1) 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-12'
+              }`}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-400 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-400/25">
+                  <div className="w-8 h-8 border-2 border-white rounded-lg flex items-center justify-center">
+                    <div className="w-4 h-2 bg-white rounded-sm"></div>
+                  </div>
+                </div>
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6 tracking-wide">Continuous Refinement</h3>
+                <div className="space-y-4 text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
+                  <p>Your system improves as you use it.</p>
+                  <p>Updates, optimizations, and safeguards happen automatically in the background.</p>
+                  <p className="text-gray-700 font-medium">While your business moves forward, Autera keeps everything running at its best.</p>
+                </div>
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-blue-400/30 to-transparent mt-6"></div>
+              </div>
+            </div>
+
+            {/* Silent Infrastructure */}
+            <div 
+              data-philosophy-card
+              data-index="2"
+              className={`group relative bg-white rounded-3xl border border-purple-200 shadow-lg hover:border-purple-400 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 p-6 sm:p-8 lg:p-10 ${
+                visibleCards.has(2) 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-12'
+              }`}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-purple-400/25">
+                  <div className="w-8 h-8 border-2 border-white rounded-lg flex items-center justify-center">
+                    <div className="w-3 h-3 bg-white rounded-sm"></div>
+                  </div>
+                </div>
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6 tracking-wide">Silent Infrastructure</h3>
+                <div className="space-y-4 text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
+                  <p>Autera runs beneath the surface. Steady, invisible, dependable.</p>
+                  <p>No dashboards to check, no problems to chase.</p>
+                  <p className="text-gray-700 font-medium">Just a calm, reliable flow that keeps your business in motion.</p>
+                </div>
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-purple-400/30 to-transparent mt-6"></div>
+              </div>
+            </div>
+
+            {/* Built for the Few */}
+            <div 
+              data-philosophy-card
+              data-index="3"
+              className={`group relative bg-white rounded-3xl border border-gray-300 shadow-lg hover:border-gray-400 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 p-6 sm:p-8 lg:p-10 ${
+                visibleCards.has(3) 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-12'
+              }`}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-400/5 via-transparent to-gray-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-r from-gray-400 to-gray-500 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-gray-400/25">
+                  <div className="w-8 h-8 border-2 border-white rounded-lg flex items-center justify-center">
+                    <div className="w-3 h-3 bg-white rounded-sm"></div>
+                  </div>
+                </div>
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6 tracking-wide">Built for the Few</h3>
+                <div className="space-y-4 text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
+                  <p>Autera isn't made for everyone. It's built for those who value precision over speed and peace over control.</p>
+                  <p>You don't just use our systems. You live within them.</p>
+                  <p className="text-gray-700 font-medium">Because excellence isn't about doing more. It's about needing less.</p>
+                </div>
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-400/30 to-transparent mt-6"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Products Section */}
+      <section className="py-32 bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.05)_0%,transparent_70%)]"></div>
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400/30 to-transparent"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12 sm:mb-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-6 sm:mb-8 tracking-tight px-4">
+              Our <span className="bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">Systems</span>
+            </h2>
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto tracking-wide px-4">
+              Custom-engineered infrastructure for high-performance operations
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
+            {/* Custom Website Development */}
+            <div className="group relative bg-white rounded-3xl border border-cyan-200 shadow-xl hover:shadow-2xl hover:border-cyan-400 transition-all duration-500 p-6 sm:p-8 lg:p-10 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute top-0 right-0 w-40 h-40 bg-cyan-400/20 rounded-full blur-3xl animate-pulse"></div>
+              
+              <div className="relative z-10">
+                <div className="flex items-center mb-8">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-2xl flex items-center justify-center mr-6 shadow-lg shadow-cyan-400/25">
+                    <div className="w-8 h-8 bg-white rounded-lg"></div>
+            </div>
+                  <div>
+                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-gray-900 mb-2 tracking-tight">Autera Sites</h3>
+                    <p className="text-sm sm:text-base lg:text-lg text-cyan-600 font-bold tracking-wider">Operational Gateways</p>
+                  </div>
+                </div>
+                
+                <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed">
+                  Operational gateways that convert attention directly into workflow. 
+                  Every interaction engineered to drive business forward with precision.
+                </p>
+                
+                <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
+                  <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-cyan-600 mb-3 sm:mb-4">System Architecture:</h4>
+                  <ul className="space-y-3 sm:space-y-4">
+                    <li className="flex items-start">
+                      <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-0.5 sm:mt-1 shadow-lg">
+                        <span className="text-white text-xs font-bold">✓</span>
+                      </div>
+                      <span className="text-gray-600 text-sm sm:text-base lg:text-lg font-medium tracking-wide">Precision-engineered user experience for maximum conversion</span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
+                        <span className="text-white text-xs font-bold">✓</span>
+                      </div>
+                      <span className="text-gray-600 text-lg font-medium tracking-wide">Universal compatibility across all operational environments</span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
+                        <span className="text-white text-xs font-bold">✓</span>
+                      </div>
+                      <span className="text-gray-600 text-lg font-medium tracking-wide">Intelligent content management for seamless operations</span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
+                        <span className="text-white text-xs font-bold">✓</span>
+                      </div>
+                      <span className="text-gray-600 text-lg font-medium tracking-wide">Performance optimization for maximum operational efficiency</span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
+                        <span className="text-white text-xs font-bold">✓</span>
+                      </div>
+                      <span className="text-gray-600 text-lg font-medium tracking-wide">Infrastructure deployment and continuous optimization</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div className="bg-cyan-50 rounded-2xl p-6 border border-cyan-200">
+                  <div className="text-center">
+                    <div className="text-4xl font-black text-gray-900 mb-2">
+                      Reserved for Qualified Companies
+                    </div>
+                    <p className="text-gray-600 text-lg mb-6">Apply for partnership to access our systems</p>
+                    <Link href="/apply" className="inline-block px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-bold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-xl hover:shadow-cyan-500/25 transform hover:-translate-y-1">
+                      Apply for Partnership
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Custom Voice Agents */}
+            <div className="group relative bg-white rounded-3xl border border-purple-200 shadow-xl hover:shadow-2xl hover:border-purple-400 transition-all duration-500 p-10 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute top-0 right-0 w-40 h-40 bg-purple-400/10 rounded-full blur-3xl animate-pulse"></div>
+              
+              <div className="relative z-10">
+                <div className="flex items-center mb-8">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-2xl flex items-center justify-center mr-6 shadow-lg shadow-purple-400/25">
+                    <div className="w-8 h-8 bg-white rounded-lg transform rotate-45"></div>
+                  </div>
+                  <div>
+                    <h3 className="text-4xl font-black text-gray-900 mb-2 tracking-tight">
+                      <span className="bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600 bg-clip-text text-transparent">Autera Agents</span>
+                    </h3>
+                    <p className="text-lg text-purple-600 font-bold tracking-wider">Custom Employees for Departments</p>
+                  </div>
+                </div>
+                
+                <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                  Custom-engineered intelligent agents that operate as dedicated employees for your departments.<br />
+                  Each agent understands your systems and executes decisions autonomously.<br />
+                  Operational excellence specific to your departmental needs.
+                </p>
+                
+                <div className="space-y-6 mb-8">
+                  <h4 className="text-2xl font-bold text-purple-600 mb-4">Agent Capabilities:</h4>
+                  <ul className="space-y-4">
+                    <li className="flex items-start">
+                      <div className="w-6 h-6 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
+                        <span className="text-white text-xs font-bold">✓</span>
+                      </div>
+                      <span className="text-gray-600 text-lg font-medium tracking-wide">Department-specific knowledge and operational expertise</span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-6 h-6 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
+                        <span className="text-white text-xs font-bold">✓</span>
+                      </div>
+                      <span className="text-gray-600 text-lg font-medium tracking-wide">Autonomous decision-making within departmental scope</span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-6 h-6 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
+                        <span className="text-white text-xs font-bold">✓</span>
+                      </div>
+                      <span className="text-gray-600 text-lg font-medium tracking-wide">Seamless integration with department workflows and systems</span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-6 h-6 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
+                        <span className="text-white text-xs font-bold">✓</span>
+                      </div>
+                      <span className="text-gray-600 text-lg font-medium tracking-wide">Natural language communication for team collaboration</span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-6 h-6 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
+                        <span className="text-white text-xs font-bold">✓</span>
+                      </div>
+                      <span className="text-gray-600 text-lg font-medium tracking-wide">Real-time performance tracking and departmental analytics</span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-6 h-6 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1 shadow-lg">
+                        <span className="text-white text-xs font-bold">✓</span>
+                      </div>
+                      <span className="text-gray-600 text-lg font-medium tracking-wide">24/7 availability with intelligent escalation protocols</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div className="bg-purple-50 rounded-2xl p-6 border border-purple-200">
+                  <div className="text-center">
+                    <div className="text-4xl font-black text-gray-900 mb-2">
+                      Reserved for Qualified Companies
+                    </div>
+                    <p className="text-gray-600 text-lg mb-6">Apply for partnership to access our systems</p>
+                    <Link href="/apply" className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-xl font-bold text-lg hover:from-purple-600 hover:to-indigo-600 transition-all duration-300 shadow-xl hover:shadow-purple-500/25 transform hover:-translate-y-1">
+                      Apply for Partnership
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Give Business Owners Their TIME BACK Section */}
+      <section className="py-20 bg-gradient-to-b from-white via-gray-50 to-white w-full overflow-hidden relative">
+        {/* Subtle Background */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.05)_0%,transparent_70%)]"></div>
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400/30 to-transparent"></div>
+        
+        <div className="text-center mb-12 relative z-10">
+          <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-6 tracking-tight">
+            Precision in{' '}
+            <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Motion
+            </span>
+          </h2>
+          <p className="text-2xl text-gray-600 max-w-4xl mx-auto tracking-wide">
+            Operational excellence from companies that demand continuous innovation
+          </p>
+        </div>
+        <div className="relative overflow-hidden w-full">
+          <div className="flex gap-8 animate-scroll w-full">
+            {/* First set of metrics */}
+            {metrics.map((metric, index) => (
+              <div 
+                key={`first-${index}`}
+                className="w-[400px] flex-shrink-0 p-8 rounded-3xl bg-white border border-cyan-200 shadow-lg hover:border-cyan-400 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2"
+              >
+                <div className="text-6xl font-black bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 bg-clip-text text-transparent mb-4 tracking-tight">{metric.number}</div>
+                <div className="text-2xl font-bold text-gray-900 mb-3 tracking-wider">{metric.label}</div>
+                <p className="text-base text-gray-600 leading-relaxed tracking-wide">{metric.description}</p>
+              </div>
+            ))}
+            {/* Second set of metrics for seamless loop */}
+            {metrics.map((metric, index) => (
+              <div 
+                key={`second-${index}`}
+                className="w-[400px] flex-shrink-0 p-8 rounded-3xl bg-white border border-cyan-200 shadow-lg hover:border-cyan-400 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2"
+              >
+                <div className="text-6xl font-black bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 bg-clip-text text-transparent mb-4 tracking-tight">{metric.number}</div>
+                <div className="text-2xl font-bold text-gray-900 mb-3 tracking-wider">{metric.label}</div>
+                <p className="text-base text-gray-600 leading-relaxed tracking-wide">{metric.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Partners/Tools Section (restored) */}
-      <section className="w-full overflow-hidden bg-gradient-to-r from-gray-900 via-black to-gray-900 py-12 relative">
-        {/* Futuristic Background */}
+      <section className="w-full overflow-hidden bg-gradient-to-r from-white via-gray-50 to-white py-12 relative">
+        {/* Subtle Background */}
         <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_0%,rgba(6,182,212,0.05)_50%,transparent_100%)]"></div>
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400/30 to-transparent"></div>
         
-        <p className="text-cyan-300 text-center mb-8 text-lg font-medium tracking-wider relative z-10">Reserved for qualified companies and powered by precision infrastructure</p>
+        <p className="text-cyan-600 text-center mb-8 text-lg font-medium tracking-wider relative z-10">Reserved for qualified companies and powered by precision infrastructure</p>
         <div className="relative overflow-hidden">
           <div className="flex gap-20 animate-scroll">
             {/* First set of partners */}

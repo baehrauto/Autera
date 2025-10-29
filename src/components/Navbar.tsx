@@ -58,17 +58,14 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-10 pt-2">
             {!isAuthed ? (
               <>
-                <Link href="/solutions" className="text-gray-900 font-semibold text-base hover:text-blue-600 transition-colors px-2 py-1 rounded-xl hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-200">
-                  Solutions
+                <Link href="/about" className="text-gray-900 font-semibold text-base hover:text-blue-600 transition-colors px-2 py-1 rounded-xl hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-200">
+                  About
                 </Link>
                 <Link href="/products" className="text-gray-900 font-semibold text-base hover:text-blue-600 transition-colors px-2 py-1 rounded-xl hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-200">
                   Products
                 </Link>
                 <Link href="/partnerships" className="text-gray-900 font-semibold text-base hover:text-blue-600 transition-colors px-2 py-1 rounded-xl hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-200">
                   Partnerships
-                </Link>
-                <Link href="/portfolio" className="text-gray-900 font-semibold text-base hover:text-blue-600 transition-colors px-2 py-1 rounded-xl hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-200">
-                  Portfolio
                 </Link>
                 <Link href="/contact" className="text-gray-900 font-semibold text-base hover:text-blue-600 transition-colors px-2 py-1 rounded-xl hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-200">
                   Contact
@@ -108,11 +105,11 @@ export default function Navbar() {
               {!isAuthed ? (
                 <>
                   <Link 
-                    href="/solutions" 
+                    href="/about" 
                     className="block text-gray-900 font-semibold text-lg hover:text-blue-600 transition-colors px-4 py-3 rounded-xl hover:bg-blue-50"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Solutions
+                    About
                   </Link>
                   <Link 
                     href="/products" 
@@ -127,13 +124,6 @@ export default function Navbar() {
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Partnerships
-                  </Link>
-                  <Link 
-                    href="/portfolio" 
-                    className="block text-gray-900 font-semibold text-lg hover:text-blue-600 transition-colors px-4 py-3 rounded-xl hover:bg-blue-50"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Portfolio
                   </Link>
                   <Link 
                     href="/contact" 

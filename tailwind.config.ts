@@ -33,6 +33,18 @@ const config: Config = {
           dark: '#E5E7EB',
           light: '#F9FAFB',
         },
+        // Refined Systems Custom Colors
+        'autera': {
+          'slate': 'hsl(var(--autera-slate-blue))',
+          'charcoal': 'hsl(var(--autera-charcoal))',
+          'off-white': 'hsl(var(--autera-off-white))',
+          'steel': 'hsl(var(--autera-steel-gray))',
+        },
+      },
+      fontFamily: {
+        'heading': ['Georgia', 'serif'],
+        'subheading': ['Libre Baskerville', 'Cormorant Garamond', 'serif'],
+        'body': ['Inter', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in',
