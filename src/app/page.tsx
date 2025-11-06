@@ -174,7 +174,7 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 px-4 overflow-hidden bg-white">
+      <section className="relative pt-40 pb-24 px-4 overflow-hidden bg-white">
         {/* Subtle Background Elements */}
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5"></div>
         <div className="absolute top-20 left-10 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl animate-pulse"></div>
@@ -183,7 +183,7 @@ export default function Home() {
         {/* Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.05)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
         
-        <div className="relative max-w-7xl mx-auto text-center">
+        <div className="relative max-w-7xl mx-auto text-center flex flex-col items-center justify-center">
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-gray-900 mb-6 sm:mb-8 leading-tight tracking-tight px-4">
             Precision in<br />
             <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -242,7 +242,9 @@ export default function Home() {
                     <div className="w-5 h-5 bg-black rounded-sm"></div>
                   </div>
                 </div>
-                  <h3 className="text-4xl md:text-5xl font-black text-gray-900 mb-3 tracking-wider">FOUNDATION</h3>
+                <div className="flex justify-center w-full mb-3">
+                  <h3 className="text-4xl md:text-5xl font-black text-gray-900 tracking-wider">FOUNDATION</h3>
+                </div>
                 <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 mx-auto rounded-full mb-4 shadow-lg shadow-cyan-400/50"></div>
                 <p className="text-lg text-gray-600 font-medium tracking-wide">Essential infrastructure for operational excellence</p>
               </div>
