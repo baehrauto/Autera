@@ -243,7 +243,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex justify-center w-full mb-3">
-                  <h3 className="text-4xl md:text-5xl font-black text-gray-900 tracking-wider">FOUNDATION</h3>
+                  <h3 className="text-4xl md:text-5xl font-black text-gray-900 tracking-wider text-center">FOUNDATION</h3>
                 </div>
                 <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 mx-auto rounded-full mb-4 shadow-lg shadow-cyan-400/50"></div>
                 <p className="text-lg text-gray-600 font-medium tracking-wide">Essential infrastructure for operational excellence</p>
